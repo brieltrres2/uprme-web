@@ -1,0 +1,83 @@
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background: none;
+    color: white;
+    right: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .side-menu a {
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+  }
+  
+  .side-menu a:hover {
+    background-color: #333;
+  }
+  
+  .side-menu.open {
+    right: 0; 
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+  
+  .overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .search-menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    z-index: 1001;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+  
+}
+
+.material-icons{ 
+  font-size: 50px;
+}
+
