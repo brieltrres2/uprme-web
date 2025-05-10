@@ -6,11 +6,15 @@ import "./SideMenu.css";
 import SideMenu from './homeSlideMenu';
 import SearchSideMenu from './search';
 import haikei from './haikei.svg';
+import FadeOutEffect from './components/openEffect';
+import TopBar from './components/topBar';
+import SmartLink from './components/smartLink';
+import MediaHeader from './components/mediaHeader';
+import LegalHeader from './components/legalHeader';
 
-function App() {
+
+function Home() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
-
-  
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,48 +23,11 @@ function App() {
   }, []);
 return (
     <div className="App">
-      <div className={`fullpage-overlay ${!isOverlayVisible ? "overlay-fade-out" : ""}`} />
-      <div
-        style={{
-          position: 'relative',
-          top: 0,
-          width: '100%',
-          height: '80px',
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          color: 'white',
-          display: 'flex',
-          alignItems: 'center',
-          zIndex: 10,
-          
-        }}
-      ></div>
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          width: '100%',
-          height: '80px',
-          backgroundImage: `url(${haikei})`,
-          display: 'flex',
-          alignItems: 'center',
-          zIndex: 10,
-          borderColor: "green",
-          borderBottomWidth: "10px",
-          borderTopWidth: "0px",
-          borderLeftWidth: "0px",
-          borderRightWidth: "0px",
-          borderStyle: "double",
-        }}
-      >
-        <Link className="headerLinks" to="/" style={{ color: 'white'}}><img className="logo" src="./uprmlogo.ico" alt="logo"></img></Link>
-        <Link className="headerLinks" to="/" style={{ color: 'white'}}>Home</Link>
-        <Link className="headerLinks" to="/about" style={{ color: 'white', marginLeft: '20px'}}>About Us</Link>
-        <a className="headerLinks" href="https://www.quora.com/Is-there-one-word-for-not-yet" style={{ color: 'white', marginLeft: '20px'}}>Teams</a>
-        <SideMenu />
-        <SearchSideMenu />
-      </div>
+      <FadeOutEffect />
+      <TopBar />
+      <SmartLink />
 
-      <div style={{ position: 'relative', width: '100%', height: '56%', overflow: 'hidden', marginLeft: "0px"}}>
+      <div style={{ position: 'relative', width: '100%', height: '56%', overflow: 'hidden'}}>
         <video
           autoPlay
           loop
@@ -72,7 +39,7 @@ return (
             height: '500px',
             objectFit: 'cover',
             zIndex: 0,
-            left: "10px",
+            left: "0px",
             borderTopWidth: "0px",
             borderLeftWidth: "0px",
             borderRightWidth: "0px",
@@ -171,35 +138,20 @@ return (
 
 
         <div className="footer-container">
-          <div className="media-footer">
-            <hr className="footer-line"/>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./discord.png" alt="Discord" />
-            </a>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./instagram.png" alt="Instagram" />
-            </a>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./twitch.png" alt="Twitch" />
-            </a>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./youtube.png" alt="YouTube" />
-            </a>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./x.png" alt="X" />
-            </a>
-            <a href="https://www.quora.com/Is-there-one-word-for-not-yet" target="_blank" rel="noopener noreferrer">
-              <img className="footerSmallLogo" src="./tiktok.png" alt="TikTok" />
-            </a>
-            <hr className="footer-line"/>
-          </div>
+         <MediaHeader />
 
-          <img className="footer-logo" src="./footer-logo.png" alt="logo"></img>
-          <p>Copyright © UPRM Esports 2025. All Rights Reserved<br></br>University of Puerto Rico - Mayagüez Campus<br></br>eSports Student Organization</p>
+         <img className="footer-logo" src="./footer-logo.png" alt="logo"></img>
+            
+              <p>
+  Copyright © UPRM Esports 2025. All Rights Reserved<br />
+  University of Puerto Rico - Mayagüez Campus<br />
+  eSports Student Organization<br />
+ made with <img className="heart-gif" src="../heart.gif" alt="heart" /> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
+</p>
+              </div>
         </div>
-      </div>
       </div>
   );
 }
 
-export default App;
+export default Home;

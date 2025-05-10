@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: black; /* Set background to black */
+  background: linear-gradient(to top, #000001, #1d1d1d);
   color: white; /* Adjust text color for contrast */
 }
 

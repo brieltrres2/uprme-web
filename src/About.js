@@ -1,4 +1,5 @@
-
+import FadeOutEffect from './components/openEffect';
+import TopBar from './components/topBar';
 import './App.css';
 import "./index.css";
 import { Link } from "react-router-dom";
@@ -6,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 
 
-function App() {
+function About() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
   
     useEffect(() => {
@@ -16,27 +17,8 @@ function App() {
     }, []);
   return (
     <div className="App">
-      <div className={`fullpage-overlay ${!isOverlayVisible ? "overlay-fade-out" : ""}`} />
-      <div
-    style={{
-      position: 'relative',
-      top: 0,
-      width: '100%',
-      height: '80px',
-      backgroundColor: 'rgba(0, 0, 0, 0)',
-      color: 'white',
-      display: 'flex',
-      alignItems: 'center',
-      padding: '0 40px, 0, 0',
-      zIndex: 10,
-    }}
-  >
-    <Link className="headerLinks" to="/" style={{ color: 'white'}}><img className="logo" src="./logo192.png" alt="logo"></img></Link>
-    <Link className="headerLinks" to="/" style={{ color: 'white'}}>Home</Link>
-    <a className="headerLinks" href="https://www.quora.com/Is-there-one-word-for-not-yet" style={{ color: 'white', marginLeft: '20px'}}>About Us</a>
-    <a className="headerLinks" href="https://www.quora.com/Is-there-one-word-for-not-yet" style={{ color: 'white', marginLeft: '20px'}}>Teams</a>
-  </div>
-
+     <FadeOutEffect />
+     <TopBar />
      
   <div
     style={{
@@ -97,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default About;
