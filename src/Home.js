@@ -115,7 +115,7 @@ return (
 
   <div className="team-item overwatch">
     <img src="./over.ico" alt="overwatch" className="overlay-icon" />
-    <a href="/teams/rocket-league">
+    <a href="/teams/overwatch">
       <img src="./overwatch.png" alt="Overwatch" className="team-logo z-effect" />
     </a>
   </div>
@@ -132,8 +132,8 @@ return (
 
   <div className="divider" style={{marginBottom:'300px'}}></div>
 
-<div className="calendar play-bold" style={{fontSize: '90px'}}>
-<a href="/calendar" style={{color: 'white', textDecoration:'none'}}>CALENDAR</a>
+<div className="calendar" style={{fontSize: '90px'}}>
+<a href="/calendar" style={{textDecoration:'none'}}>CALENDAR</a>
 </div>
 
 

@@ -14,8 +14,8 @@
   .side-menu {
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -25%;
+    width: 20%;
     height: 100%;
     background-color: #111;
     padding-top: 60px;
@@ -23,38 +23,42 @@
     z-index: 1000;
   }
   
-  .side-menu a {
-    display: block;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-  }
-  
-  .side-menu a:hover {
-    background-color: #333;
-  }
+.side-menu a {
+  display: block;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.side-menu a:hover {
+  color: lime;
+}
+
   
   .side-menu.open {
     right: 0; 
   }
   
   .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.8);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 999;
-  }
-  
-  .overlay.show {
-    opacity: 1;
-    visibility: visible;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  z-index: 999;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
 
   .search-menu-btn {
     position: fixed;
@@ -79,5 +83,10 @@
 
 .material-icons{ 
   font-size: 50px;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
+.material-icons:hover{ 
+ color: lime;
+}

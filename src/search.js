@@ -13,10 +13,14 @@ function SearchSideMenu() {
     setTimeout(() => setIsOpen(true), 10); // Small delay to ensure transition
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-    setTimeout(() => setIsVisible(false), 300); // Match CSS transition duration
-  };
+const closeMenu = () => {
+  setIsOpen(false); // Start fade-out
+  // Delay unmount until transition ends
+  setTimeout(() => {
+    setIsVisible(false);
+  }, 300); // Must match your CSS transition duration (0.3s)
+};
+
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value); // Update the search query
@@ -38,11 +42,19 @@ function SearchSideMenu() {
 
   return (
     <>
-     <button 
-      className="search-menu-btn" onClick={() => {toggleMenu(); setIsOpen(!isOpen)}}>
-        <i className="material-icons" style={{marginRight: '20px' , width: '30px', height: '30px' }}>search</i>
+<button 
+  className="search-menu-btn" 
+ onClick={toggleMenu}
+>
+  <i 
+    className="material-icons" 
+    style={{ marginRight: '20px', width: '30px', height: '30px' }}
+  >
+    search
+  </i>
+</button>
 
-      </button>
+
 
       {isVisible && (
         <div

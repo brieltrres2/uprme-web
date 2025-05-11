@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background: linear-gradient(to top, #000001, #1d1d1d);
+  background-size: cover;
   color: white; /* Adjust text color for contrast */
 }
 
@@ -12,6 +13,10 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: no-preference) {

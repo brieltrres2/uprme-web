@@ -1,4 +1,23 @@
+a {
+  color: inherit;
+  text-decoration-color: inherit;
+} 
+
+
+html, body {
+  height: 100%;         /* Ensure both html and body take up the full height of the viewport */
+  margin: 0;            /* Remove any default margin */
+  background:#000001;
+}
+
 body {
+  min-height: 100vh;    /* Ensure the body takes at least the full height of the viewport */
+}
+
+
+body {
+    height: 100%;
+  color: inherit;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -61,28 +80,40 @@ h1 {
   padding-right: 30px;
   padding-left: 30px;
 }
-
 .headerLinks {
   font-family: "Play", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
   font-size: 17px;
-  text-decoration: none;
   position: relative;
   z-index: 10;
-  text-decoration-color: rgb(0, 0, 0);
-  text-decoration-thickness: 0px;
-  scale: 1;
-  
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none; /* disable native underline */
+}
+
+.headerLinks::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transform: translateX(-50%);
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .headerLinks:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: white;
-  transition: text-decoration-color 0.3s ease;
+  color: lime;
 }
+
+.headerLinks:hover::after {
+  width: 100%;
+  background-color: lime;
+}
+
 
 .footer-container {
   display: flex;
@@ -113,16 +144,24 @@ h1 {
   justify-content: space-between;
   position: absolute;
   bottom: 10%;
-  left: 37%;
-  width: 500px;
+  left: 50%;  /* Position the footer at the center horizontally */
+  transform: translateX(-50%); /* Adjust to truly center it */
+  width: 50%;
   padding: 0 20px;
 }
 
+.footer-line {
+  border: none;
+  border-top: 10px solid rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 .footerSmallLogo {
   filter: brightness(1) sepia(1) hue-rotate(180deg);
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 }
 
 .small {
@@ -177,11 +216,35 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: oblique;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
+  font-size: 30px;
+  text-decoration: none; /* remove default underline */
+  margin: 40px;
+  position: relative;
+  color: white; /* or your desired color */
+  transition: color 0.3s ease;
 }
+
+.menu-element::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-element:hover {
+  color: lime; /* optional hover color */
+}
+
+.menu-element:hover::after {
+  width: 100%;
+  background-color: lime;
+}
+
 
 .fullpage-overlay {
   position: fixed;
@@ -270,20 +333,42 @@ h1 {
    display: inline-block;
   width:20px
 }
-
-
 .calendar {
-text-decoration-color: rgb(0, 0, 0);
-text-decoration-thickness: 0px;
-scale: 1;
+  color: white;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 400px;
+  text-decoration: none; /* Remove the default underline */
+  position: absolute;
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);  /* Move back by 50% of its own width */
+  display: inline-block; /* Ensures the pseudo-element is the same width as the text */
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.calendar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .calendar:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: white;
-  transition: text-decoration-color 0.3s ease;
+  color: lime;
 }
+
+.calendar:hover::after {
+  width: 100%;
+  background-color: lime;
+}
+
+
 
 .signature {
   display: flex;
@@ -320,3 +405,23 @@ p {
 .jiffkami{
   color: pink
 }
+
+.about-us {
+text-decoration-color: rgb(0, 0, 0);
+text-decoration-thickness: 1px;
+scale: 1;
+color: white;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 0px;
+}
+
+.about-us:hover {
+  color: lime;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: white;
+  transition: color 0.2s linear;
+}
+

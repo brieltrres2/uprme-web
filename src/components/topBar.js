@@ -55,11 +55,10 @@ return(
     >
         
             <SmartLink to="/"><img className="logo" src="./uprmlogo.ico" alt="logo"></img></SmartLink>
-            <SmartLink className="headerLinks" to="/" style={{ color: 'white', marginLeft: '20px' }}>Home</SmartLink>
-            <SmartLink className="headerLinks" to="/about" style={{ color: 'white', marginLeft: '20px' }}>About</SmartLink>
-            <SmartLink className="headerLinks" to="/teams" style={{ color: 'white', marginLeft: '20px' }}>Teams</SmartLink>
+            <SmartLink className="headerLinks" to="/" style={{marginLeft: '20px' }}>Home</SmartLink>
+            <SmartLink className="headerLinks" to="/about" style={{marginLeft: '20px' }}>About</SmartLink>
+            <SmartLink className="headerLinks" to="/teams" style={{marginLeft: '20px' }}>Teams</SmartLink>
             <SideMenu />
-            <SearchSideMenu />
         </div></>
 
     );

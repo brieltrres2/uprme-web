@@ -39,9 +39,9 @@ function SideMenu() {
 
       <div className={`side-menu ${isOpen ? "open" : ""}`}>
         <hr className="menu-line" />
-        <Link className="menu-element" to="/" style={{ color: 'white' }}>HOME</Link>
-        <Link className="menu-element" to="/teams" style={{ color: 'white' }}>TEAMS</Link>
-        <Link className="menu-element" to="/about" style={{ color: 'white' }}>ABOUT US</Link>
+        <Link className="menu-element" to="/" >HOME</Link>
+        <Link className="menu-element" to="/teams">TEAMS</Link>
+        <Link className="menu-element" to="/about">ABOUT US</Link>
       </div>
     </>
   );
