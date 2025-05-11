@@ -1,0 +1,13 @@
+name: Auto Assign Me
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign issue to myself
+        uses: pozil/auto-assign-issue@v1
+        with:
+          assignees: brieltrres2
