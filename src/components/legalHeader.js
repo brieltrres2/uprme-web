@@ -10,8 +10,7 @@ function LegalHeader (){
 
 return(
     <div className="legal-footer">
-            <img className="footer-logo" src="./footer-logo.png" alt="logo"></img>
-          <p>Copyright © UPRM Esports 2025. All Rights Reserved<br></br>University of Puerto Rico - Mayagüez Campus<br></br>eSports Student Organization</p>
+            
           </div>
     );
  }

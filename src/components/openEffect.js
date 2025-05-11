@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css"; // Assuming the styles are in App.css
+import "../App.css"; 
 
 function FadeOutEffect() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
