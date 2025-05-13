@@ -11,6 +11,8 @@
     font-size: 18px;
   }
   
+
+
   .side-menu {
     position: fixed;
     top: 0;
@@ -29,11 +31,12 @@
   padding: 12px 20px;
   text-decoration: none;
   background-color: transparent;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .side-menu a:hover {
   color: lime;
+
 }
 
   
@@ -90,3 +93,4 @@
 .material-icons:hover{ 
  color: lime;
 }
+

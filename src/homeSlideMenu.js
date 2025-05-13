@@ -43,6 +43,8 @@ function SideMenu() {
         <Link className="menu-element" to="/teams">TEAMS</Link>
         <Link className="menu-element" to="/about">ABOUT US</Link>
       </div>
+      <div className="menu-media-header-wrapper">
+  </div>
     </>
   );
 }

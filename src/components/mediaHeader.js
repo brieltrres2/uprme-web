@@ -9,8 +9,7 @@ import haikei from '../haikei.svg';
 function MediaHeader (){
 
 return(
-    <div className="media-footer">
-      <hr className="footer-line" />
+    <div className="media-footer" style={{justifyContent: "center", display: "flex" , marginTop: '10px'}}>
             <a href="https://discord.gg/CS4g3b8ySP" rel="noopener noreferrer">
   <img className="footerSmallLogo" src="./discord.png" alt="Discord" />
 </a>
@@ -29,9 +28,6 @@ return(
 <a href="https://www.tiktok.com/@uprmesports" rel="noopener noreferrer">
   <img className="footerSmallLogo" src="./tiktok.png" alt="TikTok" />
 </a>
-<hr className="footer-line" />
-
-
           </div>
     );
  }

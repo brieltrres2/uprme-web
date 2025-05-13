@@ -10,7 +10,6 @@ import FadeOutEffect from './components/openEffect';
 import TopBar from './components/topBar';
 import SmartLink from './components/smartLink';
 import MediaHeader from './components/mediaHeader';
-import LegalHeader from './components/legalHeader';
 
 
 function Home() {
@@ -22,7 +21,7 @@ function Home() {
     }, 1); // fade out instantly
   }, []);
 return (
-    <div className="App">
+    <div className="App" style={{background: "linear-gradient(to top, #000001, #1d1d1d)"}}>
       <FadeOutEffect />
       <TopBar />
       <SmartLink />
@@ -137,20 +136,28 @@ return (
 </div>
 
 
-        <div className="footer-container">
+        <div className="footer-container" style={{backgroundColor: 'rgb(0, 0, 0)'}}>
          <MediaHeader />
-
-         <img className="footer-logo" src="./footer-logo.png" alt="logo"></img>
+         </div>
+         <div className="footerXM">
             
               <p>
   Copyright © UPRM Esports 2025. All Rights Reserved<br />
   University of Puerto Rico - Mayagüez Campus<br />
   eSports Student Organization<br />
- made with <img className="heart-gif" src="../heart.gif" alt="heart" /> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
+ made with <img className="heart-gif" src="../heart.gif" alt="heart"/> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
 </p>
               </div>
+              
+              <div className="legal-container">
+                <Link to="/terms-of-service" className="legal-link" style={{paddingRight: '10px'}}>Terms of Service</Link>
+                <div class="white">|</div>
+                <Link to="/privacy-policy" className="legal-link" style={{paddingRight: '10px'}}>Privacy Policy</Link>
+                <div class="white">|</div>
+                <Link to="/about" className="legal-link">About Us</Link>  
         </div>
       </div>
+            </div>
   );
 }
 
