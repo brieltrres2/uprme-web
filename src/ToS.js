@@ -3,7 +3,7 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./SideMenu.css";
-import SideMenu from './homeSlideMenu';
+import SideMenu from './components/homeSlideMenu';
 import SearchSideMenu from './search';
 import haikei from './haikei.svg';
 import FadeOutEffect from './components/openEffect';
@@ -12,7 +12,7 @@ import SmartLink from './components/smartLink';
 import MediaHeader from './components/mediaHeader';
 import Home from './Home';
 import About from './About';
-
+import FullFooter from './components/fullFooter';
 
 function ToS() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -22,6 +22,11 @@ function ToS() {
       setIsOverlayVisible(false);
     }, 1); // fade out instantly
   }, []);
+
+  useEffect(() => {
+    document.title = "Terms of Service - UPRM Esports";
+  }, []);
+
 return (
     <><div className="App" style={{ background: 'black' }}>
     <FadeOutEffect />
@@ -103,12 +108,6 @@ return (
         <li>significantly impairing our legitimate interests;</li>
         <li>offending us or any third party.</li>
       </ul>
-      <h2>GUARANTEES</h2>
-      <h3>Legal guarantee of conformity for goods under EU law</h3>
-      <p>We guarantee the conformity of goods sold to European consumers for at least 2 years from delivery. This guarantee applies to goods on our website according to the laws of your country.</p>
-      <p>The laws of your country may grant you broader rights regarding legal guarantees of conformity.</p>
-      <h3>Conformity to contract for consumers in the United Kingdom</h3>
-      <p>UK consumers have the right to receive goods that conform to the contract.</p>
       <h2>LIABILITY AND INDEMNIFICATION</h2>
       <p>We limit our liability as much as legally allowed when executing agreements with you. This means our responsibility for damages is reduced to the maximum extent permitted by law unless explicitly stated otherwise or agreed upon with you.</p>
       <h4>Indemnification</h4>
@@ -211,23 +210,9 @@ return (
 
     </div>
 
-  </div><div className="footer-container" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-      <MediaHeader />
-    </div><div className="footerXM">
-
-      <p>
-        Copyright © UPRM Esports 2025. All Rights Reserved<br />
-        University of Puerto Rico - Mayagüez Campus<br />
-        eSports Student Organization<br />
-        made with <img className="heart-gif" src="../heart.gif" alt="heart" /> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
-      </p>
-    </div><div className="legal-container">
-      <Link to="/terms-of-service" className="legal-link" style={{ paddingRight: '10px' }}>Terms of Service</Link>
-      <div class="white">|</div>
-      <Link to="/privacy-policy" className="legal-link" style={{ paddingRight: '10px' }}>Privacy Policy</Link>
-      <div class="white">|</div>
-      <Link to="/about" className="legal-link">About Us</Link>
-    </div></>
+  </div>
+  <FullFooter />
+  </>
 
   );
 }

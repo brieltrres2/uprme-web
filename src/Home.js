@@ -3,13 +3,15 @@ import "./index.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./SideMenu.css";
-import SideMenu from './homeSlideMenu';
+import SideMenu from './components/homeSlideMenu';
 import SearchSideMenu from './search';
 import haikei from './haikei.svg';
 import FadeOutEffect from './components/openEffect';
 import TopBar from './components/topBar';
 import SmartLink from './components/smartLink';
 import MediaHeader from './components/mediaHeader';
+import Footer from './components/footerTags';
+import FullFooter from './components/fullFooter';
 
 
 function Home() {
@@ -20,6 +22,11 @@ function Home() {
       setIsOverlayVisible(false);
     }, 1); // fade out instantly
   }, []);
+
+      useEffect(() => {
+        document.title = "Home - UPRM Esports";
+      }, []);
+
 return (
     <div className="App" style={{background: "linear-gradient(to top, #000001, #1d1d1d)"}}>
       <FadeOutEffect />
@@ -136,28 +143,10 @@ return (
 </div>
 
 
-        <div className="footer-container" style={{backgroundColor: 'rgb(0, 0, 0)'}}>
-         <MediaHeader />
-         </div>
-         <div className="footerXM">
-            
-              <p>
-  Copyright © UPRM Esports 2025. All Rights Reserved<br />
-  University of Puerto Rico - Mayagüez Campus<br />
-  eSports Student Organization<br />
- made with <img className="heart-gif" src="../heart.gif" alt="heart"/> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
-</p>
-              </div>
-              
-              <div className="legal-container">
-                <Link to="/terms-of-service" className="legal-link" style={{paddingRight: '10px'}}>Terms of Service</Link>
-                <div class="white">|</div>
-                <Link to="/privacy-policy" className="legal-link" style={{paddingRight: '10px'}}>Privacy Policy</Link>
-                <div class="white">|</div>
-                <Link to="/about" className="legal-link">About Us</Link>  
+<FullFooter />
+        
         </div>
       </div>
-            </div>
   );
 }
 

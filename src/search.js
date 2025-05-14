@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./SideMenu.css"; // Make sure this is your correct stylesheet
-import SideMenu from './homeSlideMenu';  // Import your original side menu
+import SideMenu from './components/homeSlideMenu';  // Import your original side menu
 
 function SearchSideMenu() {
   const [isOpen, setIsOpen] = useState(false);
