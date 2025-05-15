@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
-import Home from './Home';
-import About from './About';
-import ToS from './ToS';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './scrollToTop';
+import About from './pages/About';
+import Home from './pages/Home';
+import ToS from './pages/ToS';
 import reportWebVitals from './reportWebVitals';
+import ScrollToTop from './components/scrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

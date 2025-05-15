@@ -1,18 +1,11 @@
-import './App.css';
-import "./index.css";
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
-import "./SideMenu.css";
-import SideMenu from './components/homeSlideMenu';
-import SearchSideMenu from './search';
-import haikei from './haikei.svg';
-import FadeOutEffect from './components/openEffect';
-import TopBar from './components/topBar';
-import SmartLink from './components/smartLink';
-import MediaHeader from './components/mediaHeader';
-import Home from './Home';
-import About from './About';
-import FullFooter from './components/fullFooter';
+import { useEffect, useState } from "react";
+import FullFooter from '../components/fullFooter';
+import FadeOutEffect from '../components/openEffect';
+import SmartLink from '../components/smartLink';
+import TopBar from '../components/topBar';
+import '../App.css';
+import "../index.css";
+import "../SideMenu.css";
 
 function ToS() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);

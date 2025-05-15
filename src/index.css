@@ -199,7 +199,7 @@ h1 {
 .menu-line {
   border: none;
   border-top: 2px solid rgb(56, 56, 56);
-  width: 100%;
+  width: 80%;
   margin-bottom: 50px;
 }
 
@@ -406,7 +406,7 @@ p {
 }
 
 .jiffkami{
-  color: pink
+  color: rgb(255, 255, 255)
 }
 
 .about-us {

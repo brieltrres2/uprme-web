@@ -1,17 +1,11 @@
-import './App.css';
-import "./index.css";
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
-import "./SideMenu.css";
-import SideMenu from './components/homeSlideMenu';
-import SearchSideMenu from './search';
-import haikei from './haikei.svg';
-import FadeOutEffect from './components/openEffect';
-import TopBar from './components/topBar';
-import SmartLink from './components/smartLink';
-import MediaHeader from './components/mediaHeader';
-import Footer from './components/footerTags';
-import FullFooter from './components/fullFooter';
+import { useEffect, useState } from "react";
+import '../App.css';
+import "../SideMenu.css";
+import FullFooter from '../components/fullFooter';
+import FadeOutEffect from '../components/openEffect';
+import SmartLink from '../components/smartLink';
+import TopBar from '../components/topBar.jsx';
+import "../index.css";
 
 
 function Home() {
@@ -24,7 +18,7 @@ function Home() {
   }, []);
 
       useEffect(() => {
-        document.title = "Home - UPRM Esports";
+        document.title = " - UPRM Esports";
       }, []);
 
 return (
@@ -103,7 +97,7 @@ return (
         <div className="teams-container">
   <div className="team-item rainbow-six">
     <img src="./rainbow.ico" alt="rainbow" className="overlay-icon" />
-    <a href="/teams/rainbow-six">
+    <a href="/teams/rainbow-six-siege">
       <img src="./rainbow.png" alt="Rainbow Six: Siege" className="team-logo z-effect" />
     </a>
   </div>
@@ -112,7 +106,7 @@ return (
 
   <div className="team-item rivals">
     <img src="./rivals.ico" alt="rivals" className="overlay-icon" />
-    <a href="/teams/rivals">
+    <a href="/teams/marvel-rivals">
       <img src="./rivals.png" alt="Marvel Rivals" className="team-logo z-effect" />
     </a>
   </div>

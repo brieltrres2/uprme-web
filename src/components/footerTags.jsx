@@ -2,7 +2,7 @@ import '../App.css';
 import "../index.css";
 import { Link } from "react-router-dom";
 import "../SideMenu.css";
-import SideMenu from './homeSlideMenu';
+import SideMenu from './sideMenu';
 import SearchSideMenu from '../search';
 import haikei from '../haikei.svg';
 import footerLogo from '../footer-logo.png';
@@ -20,7 +20,7 @@ return(
                 Copyright © UPRM Esports 2025. All Rights Reserved<br />
                 University of Puerto Rico - Mayagüez Campus<br />
                 eSports Student Organization<br />
-                made with <img className="heart-gif" src={heartGif} alt="heart"/> by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
+                made with &lt;3 by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
             </p>
             <img className='icon-right' src={uprmSeal} alt="sealUPRM" style={{width:'50px', height:'50px'}} />
         </div>
