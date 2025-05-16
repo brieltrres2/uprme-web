@@ -537,5 +537,10 @@ color: white;
   transform: scale(1.1);
 }
 
-
+.stripe-item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}
 
