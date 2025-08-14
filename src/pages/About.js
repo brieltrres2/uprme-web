@@ -14,7 +14,7 @@ function About() {
     useEffect(() => {
       setTimeout(() => {
         setIsOverlayVisible(false);
-      }, 1); // fade out instantly
+      }, 1); 
     }, []);
 
       useEffect(() => {
@@ -41,7 +41,7 @@ function About() {
       fontStyle: "normal",
     }}
   >
-   <p className="p2">MADE TO CONQUER</p>
+   <p className="p2">hi hello this is placeholder :3</p>
   </div>
   <FullFooter />
         </div>

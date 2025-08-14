@@ -20,7 +20,7 @@ return(
                 Copyright © UPRM Esports 2025. All Rights Reserved<br />
                 University of Puerto Rico - Mayagüez Campus<br />
                 eSports Student Organization<br />
-                made with &lt;3 by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
+                made for UPRM Esports by <a className='jiffkami' href='https://jiffkami.space'> jiffkami</a>
             </p>
             <img className='icon-right' src={uprmSeal} alt="sealUPRM" style={{width:'50px', height:'50px'}} />
         </div>

@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
       useEffect(() => {
-        document.title = " - UPRM Esports";
+        document.title = " HOME - UPRM Esports";
       }, []);
 
 return (
@@ -32,21 +32,7 @@ return (
           autoPlay
           loop
           muted
-          style={{
-            background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8))',
-            position: 'absolute',
-            width: '100%',
-            height: '500px',
-            objectFit: 'cover',
-            zIndex: 0,
-            left: "0px",
-            borderTopWidth: "0px",
-            borderLeftWidth: "0px",
-            borderRightWidth: "0px",
-            borderBottomWidth: "10px",
-            borderColor: "green",
-            borderStyle: "double",
-          }}
+          className="cutscene"
         >
           <source src="/asset.mp4" type="video/mp4" />
         </video>
@@ -56,7 +42,6 @@ return (
             position: 'absolute',
             width: '100%',
             height: '500px',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             zIndex: 1
           }}
         />
@@ -75,7 +60,7 @@ return (
             fontStyle: "normal",
           }}
         >
-          <p className="play-regular">FROM THE WEST, <br></br></p><p className="play-bold">TO THE TOP.</p>
+          <p className="play-regular title-1">FROM THE WEST, <br></br></p><p className="play-bold title-2">TO THE TOP.</p>
         </div>
 
         <div
@@ -132,8 +117,8 @@ return (
 
   <div className="divider" style={{marginBottom:'300px'}}></div>
 
-<div className="calendar" style={{fontSize: '90px'}}>
-<a href="/calendar" style={{textDecoration:'none'}}>CALENDAR</a>
+<div className="calendar" style={{fontSize: '30px'}}>
+<a href="/" style={{marginBottom:"100px",textDecoration:'none'}}>PLACE HOLDER <br></br>&#40;can be used for calendar, about us, contact, etc&#41; <br></br></a>
 </div>
 
 

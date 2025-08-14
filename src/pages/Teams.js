@@ -43,25 +43,26 @@ return (
     >
       <p className="play-bold" style={{ marginBottom: "50px" }}>OUR TEAMS</p>
     </div>
-
+{/*
 <div classname="stripe-teams-container">
 
   <div className="stripe-item rainbow-six">
     <a href="/teams/rainbow-six-siege">
-      <img src="./stripe-r6s.jpg" alt="Rainbow Six: Siege" style={{width:'70%'}} />
+      <img src="./stripe-r6s.jpg" alt="Rainbow Six: Siege" style={{width:'50%'}} />
     </a>
   </div>
 
 
 
 </div>
-
+*/}
   </div>
   <FullFooter />
   </>
 
   );
 }
+
 
 
 export default Teams;
