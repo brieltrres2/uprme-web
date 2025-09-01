@@ -4,7 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 import "../SideMenu.css";
 import SideMenu from './sideMenu';
 import SearchSideMenu from '../search';
-import haikei from '../haikei.svg';
+import txtr from '../txtr.svg';
 import SmartLink from "./smartLink"
 
 
@@ -25,14 +25,20 @@ return(
     <><div // black stripe to make space for header
 
         style={{
-            position: 'relative',
+            position: 'fixed',
             top: 0,
             width: '100%',
             height: '80px',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            color: 'white',
+            backgroundImage: `url(${txtr})`,
+            backgroundSize: 'cover',
             display: 'flex',
             alignItems: 'center',
+            borderColor: "#FFFFFF",
+            borderBottomWidth: "5px",
+            borderTopWidth: "0px",
+            borderLeftWidth: "0px",
+            borderRightWidth: "0px",
+            borderStyle: "solid",
             zIndex: 10,
         }}
     ></div><div
@@ -41,23 +47,16 @@ return(
             top: 0,
             width: '100%',
             height: '80px',
-            backgroundImage: `url(${haikei})`,
             display: 'flex',
             alignItems: 'center',
             zIndex: 10,
-            borderColor: "green",
-            borderBottomWidth: "10px",
-            borderTopWidth: "0px",
-            borderLeftWidth: "0px",
-            borderRightWidth: "0px",
-            borderStyle: "double",
         }}
     >
         
-            <SmartLink to="/"><img className="logo" src="./uprmlogo.ico" alt="logo"></img></SmartLink>
-            <SmartLink className="headerLinks" to="/" style={{marginLeft: '20px' }}>Home</SmartLink>
-            <SmartLink className="headerLinks" to="/about" style={{marginLeft: '20px' }}>About</SmartLink>
-            <SmartLink className="headerLinks" to="/teams" style={{marginLeft: '20px' }}>Teams</SmartLink>
+            <SmartLink to="/"><img className="logo" src="./UPRM-ICON.svg" alt="logo"></img></SmartLink>
+            <SmartLink className="headerLinks" to="/" style={{marginLeft: '20px' }}>HOME</SmartLink>
+            <SmartLink className="headerLinks" to="/about" style={{marginLeft: '20px' }}>ABOUT</SmartLink>
+            <SmartLink className="headerLinks" to="/teams" style={{marginLeft: '20px' }}>TEAMS</SmartLink>
             <SideMenu />
         </div></>
 

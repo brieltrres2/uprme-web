@@ -5,7 +5,6 @@ import "../SideMenu.css";
 import SideMenu from './sideMenu';
 import SearchSideMenu from '../search';
 import haikei from '../haikei.svg';
-import footerLogo from '../footer-logo.png';
 import heartGif from '../heart.gif';
 function Footer (){
 
@@ -15,7 +14,7 @@ return(
     <>
 
         <div className="footerXM" >
-            <img className='icon-left' src={footerLogo} alt="sealUPRME" style={{width:'50px', height:'50px'}}/>
+            <img className='icon-left' src="/UPRM-LOGO.svg" alt="sealUPRME" style={{width:'50px', height:'50px'}}/>
             <p>
                 Copyright © UPRM Esports 2025. All Rights Reserved<br />
                 University of Puerto Rico - Mayagüez Campus<br />
