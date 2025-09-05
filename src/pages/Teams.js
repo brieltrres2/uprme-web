@@ -17,7 +17,7 @@ function Teams() {
   }, []);
 
   useEffect(() => {
-    document.title = "Our Teams - UPRM Esports";
+    document.title = "Teams - UPRM Esports";
   }, []);
 
 return (
@@ -41,9 +41,9 @@ return (
         fontStyle: "normal",
       }}
     >
-      <p className="play-bold" style={{ marginBottom: "50px" }}>OUR TEAMS</p>
+      <p className="montserrat-bold" style={{ marginBottom: "50px" }}>OUR TEAMS</p>
     </div>
-{/*
+
 <div classname="stripe-teams-container">
 
   <div className="stripe-item rainbow-six">
@@ -55,7 +55,7 @@ return (
 
 
 </div>
-*/}
+
   </div>
   <FullFooter />
   </>

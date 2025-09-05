@@ -6,6 +6,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Teams from './pages/Teams';
 import ToS from './pages/ToS';
+import R6 from './pages/rainbow-six';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from './components/scrollToTop';
 
@@ -18,6 +19,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/teams" element={<Teams />} />
+        <Route path="/teams/rainbow-six-siege" element={<R6 />} />
         <Route path="/terms-of-service" element={<ToS />} />
       </Routes>
     </BrowserRouter>
