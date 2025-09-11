@@ -9,6 +9,8 @@ export default function TeamItem({
   btn1Text,
   btn2Link,
   btn2Text,
+  btn3Link,
+  btn3Text,
   isActive,
   onClick,
 }) {
@@ -23,11 +25,18 @@ export default function TeamItem({
 
       <div className={`team-buttons ${isActive ? "show" : ""}`}>
         <Link to={btn1Link}>
-          <button className="team-btn">{btn1Text}</button>
+          <button id="btn1" className="team-btn">{btn1Text}</button>
         </Link>
-        <Link to={btn2Link}>
-          <button className="team-btn">{btn2Text}</button>
-        </Link>
+        {btn2Text != null && btn2Link != null && (
+          <Link to={btn2Link}>
+            <button id="btn2" className="team-btn">{btn2Text}</button>
+          </Link>
+        )}
+          {btn3Text != null && btn3Link != null && (
+          <Link to={btn3Link}>
+            <button id="btn3" className="team-btn">{btn3Text}</button>
+          </Link>
+        )}
       </div>
     </div>
   );

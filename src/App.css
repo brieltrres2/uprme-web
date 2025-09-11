@@ -1,9 +1,9 @@
-
 .App {
   text-align: center;
   background: linear-gradient(to top, #000001, #1d1d1d);
   background-size: cover;
-  color: inherit; /* Adjust text color for contrast */
+  color: inherit;
+  /* Adjust text color for contrast */
 }
 
 .App-video {
@@ -11,6 +11,7 @@
   height: 400px;
   object-fit: cover;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -45,6 +46,7 @@ html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -72,4 +74,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #888;
 }
-

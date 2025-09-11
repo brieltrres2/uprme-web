@@ -118,8 +118,8 @@ h1 {
   color: white;
   transition: color 0.3s ease;
   text-decoration: none;
-  /* disable native underline */
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
+
 }
 
 .headerLinks::after {
@@ -815,7 +815,7 @@ p {
 
 .to-about.animate {
   opacity: 1;
-  
+
 }
 
 .team-buttons {
@@ -829,25 +829,78 @@ p {
 
   opacity: 0;
   transition: opacity 0.4s ease;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .team-buttons.show {
   opacity: 1;
-  pointer-events: auto; 
+  pointer-events: auto;
 }
 
 .team-buttons .team-btn {
+  font-family: Montserrat, sans-serif;
   background: #222;
   color: white;
   border: 2px solid #fff;
-  border-radius: 8px;
+  border-radius: 30px;
   padding: 8px 14px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s ease;
+  width: 130px;
 }
+
+#btn1 {
+  font-family: Montserrat, sans-serif;
+  background: #196b00;
+  color: rgb(255, 255, 255);
+  border: 2px solid #2bff00;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#btn1:hover {
+  background: #2bff00;
+  color: black;
+}
+
+#btn2 {
+  font-family: Montserrat, sans-serif;
+  background: #8d8d8d;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#btn2:hover {
+  background: #ffffff;
+  color: black;
+}
+
+#btn3 {
+  font-family: Montserrat, sans-serif;
+  background: #c2c2c2;
+  color: rgb(0, 0, 0);
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  padding: 8px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
 
 .team-buttons .team-btn:hover {
   background: white;
@@ -856,14 +909,153 @@ p {
 
 
 .team-item {
-  flex: 0 0 200px; 
+  flex: 0 0 200px;
   position: relative;
   cursor: pointer;
 }
 
 .teams-container {
-  display: flex;          
-  flex-wrap: wrap;       
-  justify-content: center; 
-  gap: 20px;             
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  max-width: fit-content;
+
+  button {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 17px;
+    position: relative;
+    z-index: 10;
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-content {
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 20px;
+  position: absolute;
+  background-color: rgb(53, 52, 52);
+  min-width: 220px;
+  max-width: 200px;
+  box-shadow: 0px 0 40px rgba(0, 0, 0, 1);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  font-style: oblique;
+  font-size: 15px;
+  color: rgb(163, 163, 163);
+
+  padding: 20px 12px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease
+}
+
+
+.teams-h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 100px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #ffffff;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.teams-h2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 50px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #ffffff;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.player-portrait {
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  width: 400px;
+  height: 550px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+
+
+.player-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.player-name {
+    position: absolute;
+  bottom: 0;   
+  left: 0;
+  right: 0;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: 900;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+
+.portraits-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }

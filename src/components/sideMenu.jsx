@@ -17,8 +17,8 @@ function SideMenu() {
   
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [teamsOpen, setTeamsOpen] = useState(false); // TEAMS dropdown state
-  const [socialOpen, setSocialOpen] = useState(false); // SOCIAL MEDIA dropdown state
+  const [teamsOpen, setTeamsOpen] = useState(false); 
+  const [socialOpen, setSocialOpen] = useState(false);
 
   const openMenu = () => {
   setIsVisible(true);
@@ -78,7 +78,7 @@ const closeMenu = () => {
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between'
+              justifyContent: 'center',
             }}
           >
             TEAMS
@@ -106,7 +106,7 @@ const closeMenu = () => {
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between'
+              justifyContent: 'center',
             }}
           >
             SOCIAL MEDIA
