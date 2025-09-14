@@ -901,12 +901,10 @@ p {
 }
 
 
-
 .team-buttons .team-btn:hover {
   background: white;
   color: black;
 }
-
 
 .team-item {
   flex: 0 0 200px;
@@ -954,7 +952,6 @@ p {
 }
 
 .dropdown-content {
-
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -974,13 +971,11 @@ p {
   font-style: oblique;
   font-size: 15px;
   color: rgb(163, 163, 163);
-
   padding: 20px 12px;
   text-decoration: none;
   display: block;
-  transition: background-color 0.3s ease, color 0.3s ease
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .teams-h1 {
   font-family: "Montserrat", sans-serif;
@@ -1015,20 +1010,19 @@ p {
 }
 
 .player-portrait {
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   margin: 20px;
-  width: 400px;
-  height: 550px;
+  width: 200px;
+  height: 225px;
   position: relative;
   display: flex;
   flex-direction: column;
+  border: 5px solid lime;
   border-radius: 10px;
   flex: 0 0 auto;
   overflow: hidden;
 }
-
-
 
 .player-photo {
   width: 100%;
@@ -1038,24 +1032,61 @@ p {
 }
 
 .player-name {
-    position: absolute;
-  bottom: 0;   
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   text-align: center;
   padding: 5px 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 1);
   color: white;
   font-weight: 900;
-  font-size: 60px;
+  font-size: 20px;
   cursor: pointer;
+  display: inline-block;
 }
-
 
 .portraits-wrapper {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+}
+
+/* Keep your title styling */
+.player-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* For the icon + text row */
+.player-info {
+  display: inline-flex;      /* keeps icon + text inline */
+  align-items: center;       /* vertical center */
+  gap: 0.5rem;
+}
+
+/* Title icon size */
+.title-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* New footer bar holding icon + name */
+.player-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* or space-between */
+  gap: 0.5rem;
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 1);
 }

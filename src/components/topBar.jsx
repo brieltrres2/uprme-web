@@ -52,7 +52,7 @@ function TopBar() {
                 borderLeftWidth: "0px",
                 borderRightWidth: "0px",
                 borderStyle: "solid",
-                zIndex: 10,
+                zIndex: 999,
             }}
         ></div><div
             style={{
@@ -62,7 +62,7 @@ function TopBar() {
                 height: '80px',
                 display: 'flex',
                 alignItems: 'center',
-                zIndex: 10,
+                zIndex: 1000,
             }}
         >
 
@@ -80,7 +80,6 @@ function TopBar() {
           <SmartLink className="headerLinks" to="/teams/rainbow-six-siege/green-roster">RAINBOW SIX <br></br> GREEN TEAM</SmartLink>
           <SmartLink className="headerLinks" to="/teams/rocket-league/green-roster">ROCKET LEAGUE <br></br> GREEN TEAM</SmartLink>
           <SmartLink className="headerLinks" to="/teams/rocket-league/white-roster">ROCKET LEAGUE <br></br> WHITE TEAM</SmartLink>
-          {/* Add more links as needed */}
         </div>
       )}
     </div>
