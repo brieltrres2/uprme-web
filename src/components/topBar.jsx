@@ -70,18 +70,28 @@ function TopBar() {
                 <SmartLink className="headerLinks" to="/" style={{ marginLeft: '20px' }}>HOME</SmartLink>
                 <SmartLink className="headerLinks" to="/about" style={{ marginLeft: '20px' }}>ABOUT</SmartLink>
                     <div className="dropdown" style={{ marginLeft: "20px" }}>
-      <button className="dropbtn headerLinks" onClick={() => setOpen(!open)}>
-        TEAMS
-      </button>
-      {open && (
-        <div className="dropdown-content">
-          <SmartLink className="headerLinks" to="/teams/marvel-rivals/green-roster">MARVEL RIVALS <br></br> GREEN TEAM</SmartLink>
-          <SmartLink className="headerLinks" to="/teams/overwatch/green-roster">OVERWATCH <br></br> GREEN TEAM</SmartLink>
-          <SmartLink className="headerLinks" to="/teams/rainbow-six-siege/green-roster">RAINBOW SIX <br></br> GREEN TEAM</SmartLink>
-          <SmartLink className="headerLinks" to="/teams/rocket-league/green-roster">ROCKET LEAGUE <br></br> GREEN TEAM</SmartLink>
-          <SmartLink className="headerLinks" to="/teams/rocket-league/white-roster">ROCKET LEAGUE <br></br> WHITE TEAM</SmartLink>
-        </div>
-      )}
+      <div className="dropdown">
+  <button className="dropbtn headerLinks" onClick={() => setOpen(!open)}>
+    TEAMS
+  </button>
+  <div className={`dropdown-content ${open ? "show" : ""}`}>
+    <SmartLink className="headerLinks" to="/teams/marvel-rivals/green-roster">
+      MARVEL RIVALS <br /> GREEN TEAM
+    </SmartLink>
+    <SmartLink className="headerLinks" to="/teams/overwatch/green-roster">
+      OVERWATCH <br /> GREEN TEAM
+    </SmartLink>
+    <SmartLink className="headerLinks" to="/teams/rainbow-six-siege/green-roster">
+      RAINBOW SIX <br /> GREEN TEAM
+    </SmartLink>
+    <SmartLink className="headerLinks" to="/teams/rocket-league/green-roster">
+      ROCKET LEAGUE <br /> GREEN TEAM
+    </SmartLink>
+    <SmartLink className="headerLinks" to="/teams/rocket-league/white-roster">
+      ROCKET LEAGUE <br /> WHITE TEAM
+    </SmartLink>
+  </div>
+</div>
     </div>
                 </div>
                 <SideMenu />

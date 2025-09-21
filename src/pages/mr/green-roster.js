@@ -9,6 +9,15 @@ import "../../SideMenu.css";
 import txtr from "../../txtr.svg";
 import PlayerPortrait from "../../components/player-item";
 import { Navigate } from "react-router-dom";
+import bgImage from '../../txtr2.svg';
+
+const titleIcons = {
+  Player: "/player.svg",
+  Captain: "/captain.svg",
+  Coach: "/coach.svg",
+  Manager: "/manager.svg",
+};
+
 
 function MRGreen() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -70,82 +79,95 @@ function MRGreen() {
         </div>
       </div>
 
-      <hr style={{ marginTop: "0px", marginBottom: "100px" }}></hr>
 
-      <h1 className="teams-h1" style={{marginLeft:"40px", textAlign:"left"}}>PLAYERS</h1>
-      <div className="portraits-wrapper">
-        <>
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Captain"
-            name="carnefrita456"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="yeudeedle"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="willtl84"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="ch335ycheese"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="sammy6352"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="urierodz"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Player"
-            name="zeta.z"
-          />
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            name="pookyraccoon2"
-          />
-        </>
-      </div>
+     
+<div id="players-section" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url(${bgImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+  <hr style={{ marginTop: "0px", marginBottom: "50px" }}></hr>
 
-      <hr style={{ marginTop: "0px", marginBottom: "100px" }}></hr>
+  <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>PLAYERS</h1><br />
+  <span style={{ fontFamily: "Montserrat, sans-serif", fontSize: "20px", color: "white", marginLeft: "40px", textAlign: "left", display: "block", marginBottom: "20px" }}>
+    <span style={{ fontWeight: "500" }}>LEGEND: </span> <br /><br />
+    <img style={{ width: "20px" }} src={titleIcons.Captain} alt="Captain icon" /> - Captain<br />
+    <img style={{ width: "20px" }} src={titleIcons.Player} alt="Player icon" /> - Player<br />
+    <img style={{ width: "20px" }} src={titleIcons.Coach} alt="Coach icon" /> - Coach<br />
+    <img style={{ width: "20px" }} src={titleIcons.Manager} alt="Manager icon" /> - Manager<br />
+  </span>
 
-      <h1 className="teams-h1" style={{marginLeft:"40px", textAlign:"left"}}>COACHING & MANAGEMENT</h1>
-      <div className="portraits-wrapper">
-        <>
-          <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Coach"
-            name="skullmastex"
-          />
+  <div className="portraits-wrapper">
+    <>
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Captain"
+        name="carnefrita456"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="yeudeedle"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="willtl84"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="ch335ycheese"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="sammy6352"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="urierodz"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="zeta.z"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Player"
+        name="pookyraccoon2"
+      />
+    </>
+  </div>
 
-                    <PlayerPortrait
-            logo={process.env.PUBLIC_URL + "/overwatch.png"}
-            alt="jiffkami"
-            title="Manager"
-            name="willtl84"
-          />
-          
-        </>
-      </div>
+  <hr style={{ marginTop: "0px", marginBottom: "100px" }}></hr>
+
+  <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>COACHING & MANAGEMENT</h1>
+  <div className="portraits-wrapper">
+    <>
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Coach"
+        name="skullmastex"
+      />
+
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/overwatch.png"}
+        alt="jiffkami"
+        title="Manager"
+        name="willtl84"
+      />
+    </>
+  </div>
+</div>
+
 
       <FullFooter />
     </>
