@@ -6,10 +6,10 @@ import TopBar from "../../components/topBar";
 import "../../App.css";
 import "../../index.css";
 import "../../SideMenu.css";
-import txtr from "../../txtr.svg";
+import txtr from "../../txtr3.svg";
 import PlayerPortrait from "../../components/player-item";
 import { Navigate } from "react-router-dom";
-import bgImage from '../../txtr2.svg';
+import bgImage from '../../txtr4.svg';
 
 const titleIcons = {
   Player: "/player.svg",

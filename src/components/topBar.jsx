@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "../SideMenu.css";
 import SideMenu from './sideMenu';
 import SearchSideMenu from '../search';
-import txtr from '../txtr.svg';
+import txtr from '../txtr3.svg';
 import SmartLink from "./smartLink"
 
 
