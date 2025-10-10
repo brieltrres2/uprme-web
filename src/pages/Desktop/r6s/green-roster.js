@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import FullFooter from "../../components/fullFooter";
-import FadeOutEffect from "../../components/openEffect";
-import SmartLink from "../../components/smartLink";
-import TopBar from "../../components/topBar";
-import "../../App.css";
-import "../../index.css";
-import "../../SideMenu.css";
-import txtr from "../../txtr.svg";
-import PlayerPortrait from "../../components/player-item";
+import FullFooter from "../../../components/fullFooter";
+import FadeOutEffect from "../../../components/openEffect";
+import SmartLink from "../../../components/smartLink";
+import TopBar from "../../../components/topBar";
+import '../../../App.css';
+import "../../../index.css";
+import "../../../SideMenu.css";
+import txtr from "../../../txtr.svg";
+import bgImage from '../../../txtr2.svg';
+import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
-import bgImage from '../../txtr2.svg';
+
 
 const titleIcons = {
   Player: "/player.svg",
@@ -19,7 +20,7 @@ const titleIcons = {
 };
 
 
-function RLGreen() {
+function R6Green() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   const [roster, setRoster] = useState([]);
@@ -31,7 +32,7 @@ function RLGreen() {
   }, []);
 
   useEffect(() => {
-    document.title = "ROCKET LEAGUE GREEN - UPRM Esports";
+    document.title = "RAINBOW SIX GREEN - UPRM Esports";
   }, []);
 
   useEffect(() => {
@@ -174,4 +175,4 @@ function RLGreen() {
   );
 }
 
-export default RLGreen;
+export default R6Green;

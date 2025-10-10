@@ -1,14 +1,14 @@
-import FadeOutEffect from '../components/openEffect';
-import TopBar from '../components/topBar.jsx';
-import '../App.css';
-import "../index.css";
+import FadeOutEffect from '../../components/openEffect.jsx';
+import TopBar from '../../components/topBar.jsx';
+import '../../App.css';
+import "../../index.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import FullFooter from '../components/fullFooter';
+import FullFooter from '../../components/fullFooter.jsx';
 
 
 
-function About() {
+function MobAbout() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
   
     useEffect(() => {
@@ -49,4 +49,4 @@ function About() {
   );
 }
 
-export default About;
+export default MobAbout;

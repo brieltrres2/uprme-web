@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import FullFooter from '../components/fullFooter';
-import FadeOutEffect from '../components/openEffect';
-import SmartLink from '../components/smartLink';
-import TopBar from '../components/topBar';
-import '../App.css';
-import "../index.css";
-import "../SideMenu.css";
+import FullFooter from '../../components/fullFooter';
+import FadeOutEffect from '../../components/openEffect';
+import SmartLink from '../../components/smartLink';
+import TopBar from '../../components/topBar';
+import '../../App.css';
+import "../../index.css";
+import "../../SideMenu.css";
 
 function ToS() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);

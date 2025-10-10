@@ -1,14 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import "../App.css";
-import "../SideMenu.css";
-import FullFooter from "../components/fullFooter";
-import FadeOutEffect from "../components/openEffect";
-import SmartLink from "../components/smartLink";
-import TopBar from "../components/topBar.jsx";
-import "../index.css";
-import TeamItem from "../components/team-item.jsx";
+import '../../App.css';
+import "../../index.css";
+import "../../SideMenu.css";
+import FullFooter from "../../components/fullFooter.jsx";
+import FadeOutEffect from "../../components/openEffect.jsx";
+import SmartLink from "../../components/smartLink.jsx";
+import TopBar from "../../components/mobTopBar.jsx";
+import TeamItem from "../../components/team-item.jsx";
 
-function Home() {
+function MobHome() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
   const [titleVisible, setTitleVisible] = useState(false);
   const titleRef = useRef(null);
@@ -116,7 +116,7 @@ const [activeTeam, setActiveTeam] = useState(null);
       <div className="divider" style={{ marginTop: "80px" }}></div>
       <div style={{ position: "relative", width: "100%", height: "56%" }}>
         <div>
-          <video autoPlay loop muted playsInline className="cutscene">
+          <video autoPlay loop muted playsInline className="cutscene" style={{height: '100%',}}>
             <source src="/asset.mp4" type="video/mp4" />
           </video>
 
@@ -138,35 +138,31 @@ const [activeTeam, setActiveTeam] = useState(null);
       </div>
 
 
-      <div className="home-about-section">
-        <div className="about-parallax"></div>
-        <div className="home-about-left">
-          <img
-            className="home-about-left-img"
-            src="./UPRM-LOGO-BORDE-BLANCO.svg"
-            alt="bulldog"
-          />
+      <div className="mhome-about-section">
+        <div className="mabout-parallax"></div>
+
           <h1
             ref={titleRef}
-            className={`home-about-title ${titleVisible ? "animate" : ""}`}
+            className={`mhome-about-title ${titleVisible ? "animate" : ""}`}
           >
             ABOUT US
           </h1>
-        </div>
 
-        <div className="home-about-right">
-          <p className={`home-about-text ${titleVisible ? "animate" : ""}`}>
+
+        <div className="mhome-about-left">
+          <p className={`mhome-about-text ${titleVisible ? "animate" : ""}`}>
             UPRM Esports is a collegiate organization with a mission to unite
             gamers, develop skills, and foster a supportive & inclusive
             community. We host tournaments and events that help players grow
             both individually and as a team. Whether you’re aiming to compete or
             just enjoy hanging out with friends, UPRM Esports is your home.
           </p>
-          <p className={`to-about ${titleVisible ? "animate" : ""}`}>
+          
+        </div>
+        <p className={`mto-about ${titleVisible ? "animate" : ""}`}>
             <SmartLink className={`headerLinks to-about ${titleVisible ? "animate" : ""}`} to="/about">Learn More &rarr;</SmartLink>
 
           </p>
-        </div>
       </div>
       <div
         className="full-teams-section"
@@ -199,7 +195,7 @@ const [activeTeam, setActiveTeam] = useState(null);
           </p>
         </div>
 
-        <div className="teams-container">
+        <div className="teams-container" style={{flexDirection: 'column', alignItems: 'center', }}>
       {teams.map((team, index) => (
         <div key={team.id}>
           <TeamItem
@@ -216,12 +212,6 @@ const [activeTeam, setActiveTeam] = useState(null);
 
     <div className="divider" style={{ marginBottom: "300px" }}></div>
 
-        <div className="calendar" style={{ fontSize: "30px" }}>
-          <a href="/" style={{ marginBottom: "100px", textDecoration: "none" }}>
-            PLACE HOLDER <br></br>&#40;can be used for calendar, about us,
-            contact, etc&#41; <br></br>
-          </a>
-        </div>
 
         <FullFooter />
       </div>
@@ -229,4 +219,4 @@ const [activeTeam, setActiveTeam] = useState(null);
   );
 }
 
-export default Home;
+export default MobHome;
