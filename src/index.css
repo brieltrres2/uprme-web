@@ -770,7 +770,7 @@ position: relative;
 }
 
 .about-parallax {
-  background-image: url('./txtr.svg');
+  background-image: url('./txtr3.svg');
   content: "";
   position: absolute;
   inset: 0;

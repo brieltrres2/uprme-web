@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+<<<<<<< HEAD:src/pages/Desktop/rl/white-roster.js
 import FullFooter from "../../../components/fullFooter";
 import FadeOutEffect from "../../../components/openEffect";
 import SmartLink from "../../../components/smartLink";
@@ -11,6 +12,19 @@ import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
 
+=======
+import FullFooter from "../../components/fullFooter";
+import FadeOutEffect from "../../components/openEffect";
+import SmartLink from "../../components/smartLink";
+import TopBar from "../../components/topBar";
+import "../../App.css";
+import "../../index.css";
+import "../../SideMenu.css";
+import txtr from "../../txtr3.svg";
+import PlayerPortrait from "../../components/player-item";
+import { Navigate } from "react-router-dom";
+import bgImage from '../../txtr4.svg';
+>>>>>>> ea097f9e0a1475ee2d18b597edf3ee2a526fed7f:src/pages/rl/white-roster.js
 
 const titleIcons = {
   Player: "/player.svg",
