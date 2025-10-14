@@ -41,9 +41,13 @@ function About() {
       fontStyle: "normal",
     }}
   >
-   <p className="p2">hi hello this is placeholder :3</p>
+   <p ><span style={{textDecoration: 'underline'}}>PORTIC</span> <br></br> UPRM ESPORTS</p>
+   <h6 style={{fontSize: '20px', fontStyle: 'oblique', color: 'rgb(75,75,75)'}}>Portal of Information & Contact</h6>
   </div>
+  <div style={{marginTop:'500px'}}>
+  
   <FullFooter />
+  </div>
         </div>
 
   );

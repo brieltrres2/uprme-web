@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD:src/pages/Desktop/mr/green-roster.js
 import FullFooter from "../../../components/fullFooter";
 import FadeOutEffect from "../../../components/openEffect";
 import SmartLink from "../../../components/smartLink";
@@ -12,19 +11,6 @@ import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
 
-=======
-import FullFooter from "../../components/fullFooter";
-import FadeOutEffect from "../../components/openEffect";
-import SmartLink from "../../components/smartLink";
-import TopBar from "../../components/topBar";
-import "../../App.css";
-import "../../index.css";
-import "../../SideMenu.css";
-import txtr from "../../txtr3.svg";
-import PlayerPortrait from "../../components/player-item";
-import { Navigate } from "react-router-dom";
-import bgImage from '../../txtr4.svg';
->>>>>>> ea097f9e0a1475ee2d18b597edf3ee2a526fed7f:src/pages/mr/green-roster.js
 
 const titleIcons = {
   Player: "/player.svg",
@@ -111,50 +97,50 @@ function MRGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/carnefrita456.png"}
+        alt="carnefrita456"
         title="Captain"
         name="carnefrita456"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/yeudeedle.png"}
+        alt="yeudeedle"
         title="Player"
         name="yeudeedle"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/willtl84.png"}
+        alt="willtl84"
         title="Player"
         name="willtl84"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/ch335ycheese.png"}
+        alt="ch335ycheese"
         title="Player"
         name="ch335ycheese"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/sammy6352.png"}
+        alt="sammy6352"
         title="Player"
         name="sammy6352"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/urierodz.png"}
+        alt="urierodz"
         title="Player"
         name="urierodz"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/zeta.png"}
+        alt="zeta.z"
         title="Player"
         name="zeta.z"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/marvel-rivals/pookyraccoon2.png"}
+        alt="pookyraccoon2"
         title="Player"
         name="pookyraccoon2"
       />
@@ -167,15 +153,15 @@ function MRGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/skullmastex.jpg"}
+        alt="skullmastex"
         title="Coach"
         name="skullmastex"
       />
 
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/willtl84.jpg"}
+        alt="willtl84"
         title="Manager"
         name="willtl84"
       />
