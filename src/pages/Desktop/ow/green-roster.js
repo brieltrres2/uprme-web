@@ -97,52 +97,52 @@ function OWGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/skullmastex.png"}
+        alt="gabster"
         title="Captain"
-        name="carnefrita456"
+        name="gabster"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="TheSeaBass"
         title="Player"
-        name="yeudeedle"
+        name="TheSeaBass"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="ghfthjhk"
         title="Player"
-        name="willtl84"
+        name="ghfthjhk"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="forest"
         title="Player"
-        name="ch335ycheese"
+        name="forest"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="rolindo"
         title="Player"
-        name="sammy6352"
+        name="rolindo"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="Rainbow"
         title="Player"
-        name="urierodz"
+        name="Rainbow"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="Shirayukio"
         title="Player"
-        name="zeta.z"
+        name="Shirayukio"
       />
       <PlayerPortrait
         logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        alt="Pynchis"
         title="Player"
-        name="pookyraccoon2"
+        name="Pynchis"
       />
     </>
   </div>

@@ -153,14 +153,14 @@ function MRGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/skullmastex.jpg"}
+        logo={process.env.PUBLIC_URL + "/skullmastex.png"}
         alt="skullmastex"
         title="Coach"
         name="skullmastex"
       />
 
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/willtl84.jpg"}
+        logo={process.env.PUBLIC_URL + "/willtl84.png"}
         alt="willtl84"
         title="Manager"
         name="willtl84"

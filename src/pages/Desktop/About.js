@@ -5,6 +5,7 @@ import "../../index.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import FullFooter from '../../components/fullFooter.jsx';
+import { Input } from 'postcss/lib/postcss';
 
 
 
@@ -44,6 +45,10 @@ function About() {
    <p ><span style={{textDecoration: 'underline'}}>PORTIC</span> <br></br> UPRM ESPORTS</p>
    <h6 style={{fontSize: '20px', fontStyle: 'oblique', color: 'rgb(75,75,75)'}}>Portal of Information & Contact</h6>
   </div>
+
+    <input classname="contact-name"></input>
+
+  <button className="contact-me">Social Media</button>
   <div style={{marginTop:'500px'}}>
   
   <FullFooter />

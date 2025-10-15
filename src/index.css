@@ -1200,3 +1200,17 @@ position: relative;
   overflow: hidden;
 
 }
+
+.contact-me{
+  width: 650px;
+  height: 75px;
+  background-color: #196b00;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color:white;
+  border-style:solid;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size:25px; 
+}
