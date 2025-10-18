@@ -62,6 +62,14 @@ function NotFound() {
 
 
 
+const [message, setMessage] = useState("");
+useEffect(() => {
+    const messages = [
+        "Tarzan searched far and wide :(",
+        "Jane looked everywhere :("
+    ];
+    setMessage(messages[Math.floor(Math.random() * messages.length)]);
+}, []);
 
 
 
@@ -93,7 +101,10 @@ return (
                             404 <br></br>
                         </p>
                         <p className="title-2" style={{ fontSize: "30px", marginBottom: "40px" }}>We can't find the page you're looking for.</p>
-                        <p className="title-2" style={{ color: "gray", fontWeight: 600, fontSize: "20px", fontStyle: "oblique" }}>Tarzan searched far and wide :(</p>
+                        <p className="title-2" style={{ color: "gray", fontWeight: 600, fontSize: "20px", fontStyle: "oblique" }}>
+    {message}
+</p>
+
                     </div>
                 </div>
             </div>

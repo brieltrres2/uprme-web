@@ -12,6 +12,17 @@ import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
 import coverPhoto from '../../../rivalsCover.png';
 
+const players = [
+  { user: "SAYO", title: "Captain" },
+  { user: "CARNEFRITA456", title: "Player" },
+  { user: "YEUDEEDLE", title: "Player" },
+  { user: "WILLTL84", title: "Player", title: "Manager" },
+  { user: "CH33SE", title: "Player" },
+  { user: "URIERODZ", title: "Player" },
+  { user: "ZETA", title: "Player" },
+  { user: "POOKYRACOON", title: "Player" },
+];
+
 
 const titleIcons = {
   Player: "/player.svg",
@@ -79,7 +90,7 @@ function MRGreen() {
     backgroundSize: 'cover',backgroundImage:`
       linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)),
       url(${coverPhoto})`, color: "white", padding: "50px" }}>
-          <div style={{marginTop:"40px"}}><h2 className="teams-h2">MEET</h2>{" "}
+          <div style={{marginTop:"270px"}}><h2 className="teams-h2">MEET</h2>{" "}
           <h1 className="teams-h1">THE ROSTER</h1>
           <img src='../../../rivalsico.png'></img></div>
         </div>
@@ -100,55 +111,21 @@ function MRGreen() {
   </span>
 
   <div className="portraits-wrapper">
+
+    
     <>
-    <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/sayo.png"}
-        alt="Sayo"
-        title="Captain"
-        name="Sayo"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/carnefrita456.png"}
-        alt="carnefrita456"
-        title="Player"
-        name="carnefrita456"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/yeudeedle.png"}
-        alt="yeudeedle"
-        title="Player"
-        name="yeudeedle"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/willtl84.png"}
-        alt="willtl84"
-        title="Player"
-        name="willtl84"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/ch33se.png"}
-        alt="CH33SE"
-        title="Player"
-        name="CH33SE"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/urierodz.png"}
-        alt="urierodz"
-        title="Player"
-        name="urierodz"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/zeta.png"}
-        alt="zeta.z"
-        title="Player"
-        name="zeta.z"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/pookyracoon.png"}
-        alt="pookyraccoon2"
-        title="Player"
-        name="pookyraccoon2"
-      />
+
+
+{players.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/rivals-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
+
     </>
   </div>
 

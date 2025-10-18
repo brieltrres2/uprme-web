@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 
-function useFitText(max = 20, min = 10) {
+function useFitText(max = 17, min = 10) {
   const ref = useRef(null);
 
   useLayoutEffect(() => {
@@ -18,13 +18,20 @@ function useFitText(max = 20, min = 10) {
 
     resize();
     window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
+
+    const observer = new MutationObserver(resize);
+    observer.observe(el, { childList: true, characterData: true, subtree: true });
+
+    return () => {
+      window.removeEventListener("resize", resize);
+      observer.disconnect();
+    };
   }, [max, min]);
 
   return ref;
 }
 
-export default function PlayerPortrait({ icon, logo, alt, title, name }) {
+export default function PlayerPortrait({ icon, logo, alt, title, title2, user }) {
   const titleIcons = {
     Player: "/player.svg",
     Captain: "/captain.svg",
@@ -32,24 +39,35 @@ export default function PlayerPortrait({ icon, logo, alt, title, name }) {
     Manager: "/manager.svg",
   };
 
-  const titleIconSrc = title && titleIcons[title];
-  const nameRef = useFitText();
+  const titles = [title, title2].filter(Boolean);
+  const userRef = useFitText();
 
   return (
     <div className="player-portrait">
-      {icon && <img src={icon} alt={`${alt} icon`} className="overlay-icon" />}
+      {/* Main photo first, to ensure icons overlay it */}
       {logo && <img src={logo} alt={alt} className="player-photo" />}
+      {icon && <img src={icon} alt={`${alt} icon`} className="overlay-icon" />}
 
-      {(titleIconSrc || name) && (
+      {/* Stack of title icons */}
+      {titles.length > 0 && (
+        <div className="title-icons-stack">
+          {titles.map((t, i) => (
+            <img
+              key={i}
+              src={titleIcons[t]}
+              alt={`${t} icon`}
+              className="title-icon-small"
+            />
+          ))}
+        </div>
+      )}
+
+      {/* Player footer */}
+      {user && (
         <div className="player-footer">
-          {name && (
-            <span ref={nameRef} className="player-name" style={{textAlign: "center", display: "flex", alignItems: "center"}}>
-              {titleIconSrc && (
-                <img src={titleIconSrc} alt={`${title} icon`} className="title-icon" />
-              )}
-              {name}
-            </span>
-          )}
+          <span ref={userRef} className="player-name">
+            {user}
+          </span>
         </div>
       )}
     </div>
