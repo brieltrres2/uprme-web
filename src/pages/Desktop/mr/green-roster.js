@@ -10,6 +10,7 @@ import txtr from "../../../txtr.svg";
 import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
+import coverPhoto from '../../../rivalsCover.png';
 
 
 const titleIcons = {
@@ -74,9 +75,13 @@ function MRGreen() {
         <TopBar />
         <SmartLink />
 
-        <div className="title" style={{ color: "white", padding: "20px" }}>
-          <h2 className="teams-h2">MEET</h2>{" "}
+        <div className="title" style={{display:'flex',justifyContent:"center", backgroundRepeat:"no-repeat", backgroundPosition: 'center 50%',
+    backgroundSize: 'cover',backgroundImage:`
+      linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)),
+      url(${coverPhoto})`, color: "white", padding: "50px" }}>
+          <div style={{marginTop:"40px"}}><h2 className="teams-h2">MEET</h2>{" "}
           <h1 className="teams-h1">THE ROSTER</h1>
+          <img src='../../../rivalsico.png'></img></div>
         </div>
       </div>
 
@@ -96,50 +101,50 @@ function MRGreen() {
 
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/carnefrita456.png"}
-        alt="carnefrita456"
+    <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/sayo.png"}
+        alt="Sayo"
         title="Captain"
+        name="Sayo"
+      />
+      <PlayerPortrait
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/carnefrita456.png"}
+        alt="carnefrita456"
+        title="Player"
         name="carnefrita456"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/yeudeedle.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/yeudeedle.png"}
         alt="yeudeedle"
         title="Player"
         name="yeudeedle"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/willtl84.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/willtl84.png"}
         alt="willtl84"
         title="Player"
         name="willtl84"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/ch335ycheese.png"}
-        alt="ch335ycheese"
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/ch33se.png"}
+        alt="CH33SE"
         title="Player"
-        name="ch335ycheese"
+        name="CH33SE"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/sammy6352.png"}
-        alt="sammy6352"
-        title="Player"
-        name="sammy6352"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/urierodz.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/urierodz.png"}
         alt="urierodz"
         title="Player"
         name="urierodz"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/zeta.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/zeta.png"}
         alt="zeta.z"
         title="Player"
         name="zeta.z"
       />
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/marvel-rivals/pookyraccoon2.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/pookyracoon.png"}
         alt="pookyraccoon2"
         title="Player"
         name="pookyraccoon2"
@@ -153,14 +158,14 @@ function MRGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/skullmastex.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/skullmastex.png"}
         alt="skullmastex"
         title="Coach"
         name="skullmastex"
       />
 
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/willtl84.png"}
+        logo={process.env.PUBLIC_URL + "/rivals-portrait/willtl84.png"}
         alt="willtl84"
         title="Manager"
         name="willtl84"

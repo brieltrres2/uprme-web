@@ -97,7 +97,7 @@ function OWGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/skullmastex.png"}
+        logo={process.env.PUBLIC_URL + "/overwatchs.png"}
         alt="gabster"
         title="Captain"
         name="gabster"
@@ -153,17 +153,17 @@ function OWGreen() {
   <div className="portraits-wrapper">
     <>
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
+        logo={process.env.PUBLIC_URL + "/png/Frame 1.png"}
+        alt="MotleyMain"
         title="Coach"
-        name="skullmastex"
+        name="motley"
       />
 
       <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Manager"
-        name="willtl84"
+        logo={process.env.PUBLIC_URL + "/.png"}
+        alt="maglos"
+        title="Coach"
+        name="maglos"
       />
     </>
   </div>
