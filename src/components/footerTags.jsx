@@ -5,7 +5,7 @@ import "../SideMenu.css";
 import SideMenu from './sideMenu';
 import SearchSideMenu from '../search';
 import haikei from '../haikei.svg';
-import heartGif from '../heart.gif';
+
 function Footer (){
 
 const uprmSeal = 'https://www.uprm.edu/wdt/resources/seal-rum-uprm.svg';
@@ -27,6 +27,8 @@ return(
             <Link to="/terms-of-service" className="legal-link" style={{paddingRight: '10px'}}>Terms of Service</Link>
             <div class="white">|</div>
             <Link to="/about" className="legal-link">About Us</Link>
+            <div class="white">|</div>
+            <Link to="/credits" className="legal-link">Credits</Link>
         </div>
                   <div className="divider"></div>
     </>

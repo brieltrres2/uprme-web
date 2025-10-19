@@ -10,7 +10,22 @@ import txtr from "../../../txtr.svg";
 import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
+import coverPhoto from '../../../overwatchCover.png';
 
+const players = [
+  { user: "THESEABASS", title: "Player" },
+  { user: "GABSTER", title: "Player" },
+  { user: "GHFTHJHK", title: "Player" },
+  { user: "FORESTFORKEY", title: "Player" },
+  { user: "CRESCENTIA", title: "Player" },
+  { user: "STARLIGHT", title: "Player" },
+  { user: "PYNCHIS", title: "Player" },
+  { user: "ROLINDO", title: "Player" },
+];
+
+const staff = [
+  { user: "MOTLEYMAIN", title: "Coach" },
+];
 
 const titleIcons = {
   Player: "/player.svg",
@@ -74,9 +89,14 @@ function OWGreen() {
         <TopBar />
         <SmartLink />
 
-        <div className="title" style={{ color: "white", padding: "20px" }}>
-          <h2 className="teams-h2">MEET</h2>{" "}
+        <div className="title" style={{display:'flex', justifyContent:"center", backgroundRepeat:"no-repeat", backgroundPosition: 'center 30%',
+    backgroundSize: 'cover',backgroundImage:`
+      linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8)),
+      url(${coverPhoto})`, color: "white", padding: "50px" }}>
+          <div style={{marginTop:"270px"}}><h2 className="teams-h2">MEET</h2>{" "}
           <h1 className="teams-h1">THE ROSTER</h1>
+          <img src='../../../overico.png' style={{width:"200px"
+          }}></img></div>
         </div>
       </div>
 
@@ -95,55 +115,21 @@ function OWGreen() {
   </span>
 
   <div className="portraits-wrapper">
+
+    
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatchs.png"}
-        alt="gabster"
-        title="Captain"
-        name="gabster"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="TheSeaBass"
-        title="Player"
-        name="TheSeaBass"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="ghfthjhk"
-        title="Player"
-        name="ghfthjhk"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="forest"
-        title="Player"
-        name="forest"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="rolindo"
-        title="Player"
-        name="rolindo"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="Rainbow"
-        title="Player"
-        name="Rainbow"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="Shirayukio"
-        title="Player"
-        name="Shirayukio"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="Pynchis"
-        title="Player"
-        name="Pynchis"
-      />
+
+
+{players.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/overwatch-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
+
     </>
   </div>
 
@@ -152,19 +138,15 @@ function OWGreen() {
   <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>COACHING & MANAGEMENT</h1>
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/png/Frame 1.png"}
-        alt="MotleyMain"
-        title="Coach"
-        name="motley"
-      />
-
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/.png"}
-        alt="maglos"
-        title="Coach"
-        name="maglos"
-      />
+      {staff.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/overwatch-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
     </>
   </div>
 </div>

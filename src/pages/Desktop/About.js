@@ -46,9 +46,8 @@ function About() {
    <h6 style={{fontSize: '20px', fontStyle: 'oblique', color: 'rgb(75,75,75)'}}>Portal of Information & Contact</h6>
   </div>
 
-    <input classname="contact-name"></input>
-
   <button className="contact-me">Social Media</button>
+  
   <div style={{marginTop:'500px'}}>
   
   <FullFooter />

@@ -16,13 +16,17 @@ const players = [
   { user: "SAYO", title: "Captain" },
   { user: "CARNEFRITA456", title: "Player" },
   { user: "YEUDEEDLE", title: "Player" },
-  { user: "WILLTL84", title: "Player", title: "Manager" },
+  { user: "WILLTL84", title: "Manager" },
   { user: "CH33SE", title: "Player" },
   { user: "URIERODZ", title: "Player" },
   { user: "ZETA", title: "Player" },
   { user: "POOKYRACOON", title: "Player" },
 ];
 
+const staff = [
+  { user: "SKULLMASTEX", title: "Coach" },
+  { user: "WILLTL84", title: "Manager"   },
+];
 
 const titleIcons = {
   Player: "/player.svg",
@@ -134,19 +138,15 @@ function MRGreen() {
   <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>COACHING & MANAGEMENT</h1>
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/skullmastex.png"}
-        alt="skullmastex"
-        title="Coach"
-        name="skullmastex"
-      />
-
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/rivals-portrait/willtl84.png"}
-        alt="willtl84"
-        title="Manager"
-        name="willtl84"
-      />
+      {staff.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/rivals-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
     </>
   </div>
 </div>

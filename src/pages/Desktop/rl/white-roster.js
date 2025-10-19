@@ -10,7 +10,20 @@ import txtr from "../../../txtr.svg";
 import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
+import coverPhoto from '../../../rocketWhiteCover.png';
+import icon from '../../../rlwhite.png';
 
+const players = [
+  { user: "MYNTACH", title: "Captain" },
+  { user: "FLXZ", title: "Player" },
+  { user: "CARLILLOS90", title: "Player" },
+  { user: "ELIUCHI", title: "Player" },
+];
+
+const staff = [
+  { user: "MEESTERFEESH", title: "Coach" },
+  { user: "SAUCYREXY", title: "Manager" },
+];
 
 const titleIcons = {
   Player: "/player.svg",
@@ -20,7 +33,7 @@ const titleIcons = {
 };
 
 
-function RLWhite() {
+function OWGreen() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   const [roster, setRoster] = useState([]);
@@ -73,10 +86,14 @@ function RLWhite() {
         <FadeOutEffect />
         <TopBar />
         <SmartLink />
-
-        <div className="title" style={{ color: "white", padding: "20px" }}>
-          <h2 className="teams-h2">MEET</h2>{" "}
+        <div className="title" style={{display:'flex', justifyContent:"center", backgroundRepeat:"no-repeat", backgroundPosition: 'center 30%',
+    backgroundSize: 'cover',backgroundImage:`
+      linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8)),
+      url(${coverPhoto})`, color: "white", padding: "50px" }}>
+          <div style={{marginTop:"270px"}}><h2 className="teams-h2">MEET</h2>{" "}
           <h1 className="teams-h1">THE ROSTER</h1>
+          <img src={icon} style={{width:"200px"
+          }}></img></div>
         </div>
       </div>
 
@@ -95,55 +112,21 @@ function RLWhite() {
   </span>
 
   <div className="portraits-wrapper">
+
+    
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Captain"
-        name="carnefrita456"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="yeudeedle"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="willtl84"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="ch335ycheese"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="sammy6352"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="urierodz"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="zeta.z"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="pookyraccoon2"
-      />
+
+
+{players.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/rocketleague-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
+
     </>
   </div>
 
@@ -152,19 +135,15 @@ function RLWhite() {
   <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>COACHING & MANAGEMENT</h1>
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Coach"
-        name="skullmastex"
-      />
-
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Manager"
-        name="willtl84"
-      />
+      {staff.map(({ user, title }) => (
+  <PlayerPortrait
+    key={user}
+    logo={`${process.env.PUBLIC_URL}/rocketleague-portrait/${user.toLowerCase()}.png`}
+    alt={user}
+    title={title}
+    user={user}
+  />
+))}
     </>
   </div>
 </div>
@@ -175,4 +154,4 @@ function RLWhite() {
   );
 }
 
-export default RLWhite;
+export default OWGreen;
