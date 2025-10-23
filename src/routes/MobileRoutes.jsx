@@ -14,7 +14,7 @@ export default function MobileRoutes() {
     <Routes>
       <Route path="*" element={<MobNotFound />} />
       <Route path="/" element={<MobHome />} />
-      <Route path="/about" element={<MobAbout />} />
+      <Route path="/contact" element={<MobAbout />} />
       <Route path="/teams/rainbow-six-siege/green-roster" element={<MobR6Green />} />
       <Route path="/teams/overwatch/green-roster" element={<MobOWGreen />} />
       <Route path="/teams/marvel-rivals/green-roster" element={<MobMRGreen />} />

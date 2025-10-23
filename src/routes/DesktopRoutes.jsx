@@ -14,7 +14,7 @@ export default function DesktopRoutes() {
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<About />} />
       <Route path="/teams/rainbow-six-siege/green-roster" element={<R6Green />} />
       <Route path="/teams/overwatch/green-roster" element={<OWGreen />} />
       <Route path="/teams/marvel-rivals/green-roster" element={<MRGreen />} />

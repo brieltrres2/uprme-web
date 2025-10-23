@@ -68,7 +68,7 @@ function TopBar() {
 
                 <SmartLink to="/"><img className="logo" src="/UPRM-ICON.svg" alt="logo"></img></SmartLink>
                 <SmartLink className="headerLinks" to="/" style={{ marginLeft: '20px' }}>HOME</SmartLink>
-                <SmartLink className="headerLinks" to="/about" style={{ marginLeft: '20px' }}>ABOUT</SmartLink>
+                <SmartLink className="headerLinks" to="/contact" style={{ marginLeft: '20px' }}>CONTACT</SmartLink>
                     <div className="dropdown" style={{ marginLeft: "20px" }}>
       <div className="dropdown">
   <button className="dropbtn headerLinks" onClick={() => setOpen(!open)}>

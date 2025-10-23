@@ -26,11 +26,11 @@ return(
         <div className="legal-container">
             <Link to="/terms-of-service" className="legal-link" style={{paddingRight: '10px'}}>Terms of Service</Link>
             <div class="white">|</div>
-            <Link to="/about" className="legal-link">About Us</Link>
-            <div class="white">|</div>
+            <Link to="/contact" className="legal-link" style={{paddingRight: '10px'}}>Contact Us</Link>
+            {/* <div class="white">|</div>
             <Link to="/credits" className="legal-link">Credits</Link>
         </div>
-                  <div className="divider"></div>
+                  <div className="divider">*/}</div>
     </>
 );
  }

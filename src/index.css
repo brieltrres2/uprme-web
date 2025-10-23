@@ -1177,7 +1177,7 @@ position: relative;
   overflow-y: none;
   max-width: 100%;
   padding-bottom: 20px;
-  scrollbar-width: thick;               /* thin, auto, none */
+  scrollbar-width: thick;              
   scrollbar-color: rgb(0, 255, 0) #111;
 
 }
@@ -1260,4 +1260,49 @@ position: relative;
 .title-icon-small {
   width: 28px; /* adjust if needed */
   height: 28px;
+}
+
+.contact-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap: 20px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+    
+}
+
+.contact-us-title {
+  font-weight: 800;
+  font-size: 60px;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+}
+
+.contact-us-button {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  height: 80px;
+  background-color: #196b00;
+  padding: 20px;
+  border: 5px solid lime;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-style: oblique;
+  font-weight: 700;
+  font-size: 40px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-us-button:hover {
+  background-color: #005a00;
+  border: 5px solid #00ff80;
 }

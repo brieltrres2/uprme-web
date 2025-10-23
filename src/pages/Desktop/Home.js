@@ -7,6 +7,7 @@ import FadeOutEffect from "../../components/openEffect.jsx";
 import SmartLink from "../../components/smartLink.jsx";
 import TopBar from "../../components/topBar.jsx";
 import TeamItem from "../../components/team-item.jsx";
+import SocialGrid from "../../components/socialMediaContainer.jsx";
 
 function Home() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -163,7 +164,7 @@ const [activeTeam, setActiveTeam] = useState(null);
             just enjoy hanging out with friends, UPRM Esports is your home.
           </p>
           <p className={`to-about ${titleVisible ? "animate" : ""}`}>
-            <SmartLink className={`headerLinks to-about ${titleVisible ? "animate" : ""}`} to="/about">Learn More &rarr;</SmartLink>
+            
 
           </p>
         </div>
@@ -216,6 +217,23 @@ const [activeTeam, setActiveTeam] = useState(null);
 
     <div className="divider" style={{ marginBottom: "300px" }}></div>
 
+
+<div className="our-teams" style={{color:'white'}}>FOLLOW US
+
+  
+
+</div>
+<SocialGrid  />
+
+<div className="contact-us-section">
+        <h2 className="contact-us-title">GET INVOLVED</h2>
+        <p className="home-about-right" style={{ justifyContent: "center", fontSize: "30px" }}>
+          Have questions or want to learn more? Reach out to us!
+        </p>
+        <SmartLink to="/contact" className="contact-us-button">
+          <span className="home-about-right"style={{alignItems:"center",textAlign: "center", justifyContent: "center"}}> CONTACT US</span>
+        </SmartLink>
+      </div>
 
         <FullFooter />
       </div>

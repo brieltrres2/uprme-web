@@ -74,14 +74,11 @@ function SideMenu() {
             DIRECTORY
           </div>
           <hr className="menu-line" />
-          <Link className="menu-element" to="/">
-            HOME
+          <Link to="/" style={{margin:"40px"}}>
+            <span className="menu-element"> HOME </span>
           </Link>
-          <Link className="menu-element" to="/about">
-            ABOUT US
-          </Link>
-          <Link className="menu-element" to="/about">
-            CONTACT
+          <Link to="/contact" style={{margin:"40px"}}>
+            <span className="menu-element"> CONTACT US </span>
           </Link>
           <hr
             className="menu-line"
@@ -112,30 +109,30 @@ function SideMenu() {
           </div>
           <hr className="menu-line" />
           <div className={`dropdown-links ${teamsOpen ? "open" : ""}`}>
-            <Link className="menu-element" to="/teams/overwatch/green-roster">
-              OVERWATCH
+            <Link to="/teams/overwatch/green-roster" style={{margin:"40px"}}>
+              <span className="menu-element"> OVERWATCH </span>
             </Link>
             <Link
-              className="menu-element"
-              to="/teams/rocket-league/green-roster"
+            
+              to="/teams/rocket-league/green-roster" style={{margin:"40px"}}
             >
-              ROCKET LEAGUE GREEN
+              <span className="menu-element"> ROCKET LEAGUE GREEN </span>
             </Link>
             <Link
-              className="menu-element"
-              to="/teams/rocket-league/white-roster"
+              
+              to="/teams/rocket-league/white-roster"style={{margin:"40px"}}
             >
-              ROCKET LEAGUE WHITE
+              <span className="menu-element"> ROCKET LEAGUE WHITE </span>
             </Link>
-            <Link className="menu-element" to="teams/rainbow-six-siege/green-roster">
-              RAINBOW SIX
+            <Link to="teams/rainbow-six-siege/green-roster" style={{margin:"40px"}}>
+              <span className="menu-element"> RAINBOW SIX </span>
             </Link>
             <Link
               className="menu-element"
               to="/teams/marvel-rivals/green-roster"
               style={{ marginBottom: "100px" }}
             >
-              MARVEL RIVALS
+              <span className="menu-element"> MARVEL RIVALS </span>
             </Link>
           </div>
           <hr
@@ -167,27 +164,27 @@ function SideMenu() {
           </div>
           <hr className="menu-line" />
           <div className={`dropdown-links ${socialOpen ? "open" : ""}`}>
-            <a className="menu-element" href={SOCIAL_LINKS.discord}>
-              DISCORD SERVER
+            <a  href={SOCIAL_LINKS.discord} style={{margin:"40px"}}>
+              <span className="menu-element"> DISCORD SERVER </span>
             </a>
-            <a className="menu-element" href={SOCIAL_LINKS.twitch}>
-              TWITCH
+            <a  href={SOCIAL_LINKS.twitch} style={{margin:"40px"}}>
+              <span className="menu-element"> TWITCH </span>
             </a>
-            <a className="menu-element" href={SOCIAL_LINKS.twitter}>
-              X
+            <a  href={SOCIAL_LINKS.twitter} style={{margin:"40px"}}>
+              <span className="menu-element"> X (TWITTER) </span>
             </a>
-            <a className="menu-element" href={SOCIAL_LINKS.instagram}>
-              INSTAGRAM
+            <a  href={SOCIAL_LINKS.instagram} style={{margin:"40px"}}>
+              <span className="menu-element"> INSTAGRAM </span>
             </a>
-            <a className="menu-element" href={SOCIAL_LINKS.youtube}>
-              YOUTUBE
+            <a  href={SOCIAL_LINKS.youtube} style={{margin:"40px"}}>
+             <span className="menu-element"> YOUTUBE </span>
             </a>
             <a
-              className="menu-element"
+              
               href={SOCIAL_LINKS.tiktok}
               style={{ marginBottom: "200px" }}
             >
-              TIKTOK
+              <span className="menu-element"> TIKTOK </span>
             </a>
           </div>
         </div>
