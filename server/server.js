@@ -1,64 +1,60 @@
+// functions/index.js (or your main functions file)
+
 const functions = require("firebase-functions");
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const admin = require("firebase-admin");
-
-
-admin.initializeApp();
-const db = admin.firestore();
 
 const app = express();
-app.use(cors({ origin: true }));
+
+// Middleware
+app.use(cors({ origin: true })); // Important for Cloud Functions
 app.use(express.json());
 
+// Get email credentials from Firebase environment configuration
+// Set them using the CLI:
+// firebase functions:config:set gmail.user="your-email@gmail.com"
+// firebase functions:config:set gmail.pass="your-app-password"
+// firebase functions:config:set recipient.email="recipient-email@example.com"
+const gmailUser = functions.config().gmail.user;
+const gmailPass = functions.config().gmail.pass;
+const recipientEmail = functions.config().recipient.email;
 
+// Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-  service: "Gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, 
-  },
+    service: "gmail",
+    auth: {
+        user: gmailUser,
+        pass: gmailPass,
+    },
 });
 
+// POST route to handle form submission
+app.post("/send", (req, res) => {
+    const { name, email, message } = req.body;
 
-app.post("/send", async (req, res) => {
-  const { name, email, message } = req.body;
-
-
-  const logEntry = {
-    timestamp: new Date().toISOString(),
-    name,
-    email,
-    message,
-    status: "pending",
-  };
-
-  try {
-
-    const docRef = await db.collection("contactLogs").add(logEntry);
-
+    if (!name || !email || !message) {
+        return res.status(400).send("All fields are required.");
+    }
 
     const mailOptions = {
-      from: email,
-      to: process.env.EMAIL_RECEIVERS,
-      subject: `New message from ${name}`,
-      text: message,
+        from: `"${name}" <${email}>`,
+        to: recipientEmail,
+        subject: `New Contact Form Submission from ${name}`,
+        text: `You have a new message from:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+        replyTo: email,
     };
 
-
-    await transporter.sendMail(mailOptions);
-
-   
-    await db.collection("contactLogs").doc(docRef.id).update({ status: "sent" });
-
-    console.log("Email sent and logged:", docRef.id);
-    res.status(200).send("Message sent successfully!");
-  } catch (error) {
-    console.error("Error sending email or logging:", error);
-    res.status(500).send("Error sending email.");
-  }
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error("Error sending email:", error);
+            return res.status(500).send("Failed to send message.");
+        }
+        console.log("Email sent: " + info.response);
+        res.status(200).send("Message sent successfully!");
+    });
 });
 
-// Export as Firebase Cloud Function
+// Expose the Express app as a Cloud Function
+// The name 'api' will be part of the URL.
 exports.api = functions.https.onRequest(app);

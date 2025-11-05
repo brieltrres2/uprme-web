@@ -137,7 +137,12 @@ const [activeTeam, setActiveTeam] = useState(null);
           </div>
         </div>
       </div>
+<div className="rumble-of-champion">
 
+<div className="banner">
+</div>
+
+</div>
 
       <div className="home-about-section">
         <div className="about-parallax"></div>
