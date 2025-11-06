@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "../mobSideMenu.css";
 import SideMenu from './mobSideMenu';
 import SearchSideMenu from '../search';
-import txtr from '../txtr.svg';
+import txtr from '../txtr3.svg';
 import SmartLink from "./smartLink"
 
 
@@ -55,7 +55,7 @@ function TopBar() {
         zIndex: 999,
       }}
     >
-      <SmartLink to="/"><img className="logo" style={{ zIndex: 1000 }} src="/UPRM-ICON.svg" alt="logo"></img>
+      <SmartLink to="/"><img className="logo" style={{ paddingLeft:'175%', zIndex: 1000 }} src="/UPRM-ICON.svg" alt="logo"></img>
       </SmartLink>
       
     </div>

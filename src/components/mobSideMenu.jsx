@@ -63,8 +63,7 @@ const closeMenu = () => {
           <div className="menu-element-A" style={{ color: 'lime', fontSize: '20px', marginTop: '30px' }}>DIRECTORY</div>
           <hr className="menu-line" />
           <Link className="menu-element" to="/">HOME</Link>
-          <Link className="menu-element" to="/about">ABOUT US</Link>
-          <Link className="menu-element" to="/about">CONTACT</Link>
+          <Link className="menu-element" to="/contact">CONTACT US</Link>
           <hr className="menu-line" style={{ borderTop: '2px solid rgba(0, 0, 0, 0)', marginBottom: '100px' }} />
 
           {/* TEAMS Dropdown */}
@@ -88,10 +87,11 @@ const closeMenu = () => {
           </div>
           <hr className="menu-line" />
           <div className={`dropdown-links ${teamsOpen ? "open" : ""}`}>
-            <Link className="menu-element" to="/overwatch">OVERWATCH</Link>
-            <Link className="menu-element" to="/rocket-league">ROCKET LEAGUE</Link>
-            <Link className="menu-element" to="/rainbow-six-siege">RAINBOW SIX</Link>
-            <Link className="menu-element" to="/marvel-rivals" style={{ marginBottom: '100px' }}>MARVEL RIVALS</Link>
+            <Link className="menu-element" to="/teams/overwatch/green-roster">OVERWATCH</Link>
+              <Link className="menu-element" to="/teams/rocket-league/green-roster">ROCKET LEAGUE GREEN</Link>
+              <Link className="menu-element" to="/teams/rocket-league/white-roster">ROCKET LEAGUE WHITE</Link>
+            <Link className="menu-element" to="/teams/rainbow-six-siege/green-roster">RAINBOW SIX</Link>
+            <Link className="menu-element" to="/teams/marvel-rivals/green-roster" style={{ marginBottom: '100px' }}>MARVEL RIVALS</Link>
           </div>
           <hr className="menu-line" style={{ borderTop: '2px solid rgba(0, 0, 0, 0)', marginBottom: '100px' }} />
 
