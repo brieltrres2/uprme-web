@@ -1,7 +1,7 @@
 import React from "react";
 import FadeOutEffect from "../../components/openEffect.jsx";
 import MobTopBar from "../../components/mobTopBar.jsx";
-import FullFooter from "../../components/fullFooter.jsx";
+import MobFooter from "../../components/mobileFooter.jsx";
 import ContactUs from "../../components/contactUs.jsx";
 
 function MobAbout() {
@@ -14,7 +14,7 @@ function MobAbout() {
                 <ContactUs />
             </div>
 
-            <FullFooter />
+            <MobFooter />
         </div>
     );
 }

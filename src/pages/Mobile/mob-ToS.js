@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import FullFooter from '../../components/fullFooter';
+import MobFooter from "../../components/mobileFooter.jsx";
 import FadeOutEffect from '../../components/openEffect';
 import SmartLink from '../../components/smartLink';
-import TopBar from '../../components/topBar';
+import MobTopBar from "../../components/mobTopBar.jsx";
 import '../../App.css';
 import "../../index.css";
 import "../../SideMenu.css";
@@ -23,7 +23,7 @@ function MobToS() {
 return (
     <><div className="App" style={{ background: 'black' }}>
     <FadeOutEffect />
-    <TopBar />
+    <MobTopBar />
     <SmartLink />
 
 
@@ -204,7 +204,7 @@ return (
     </div>
 
   </div>
-  <FullFooter />
+  <MobFooter />
   </>
 
   );

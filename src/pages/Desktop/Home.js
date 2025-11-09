@@ -215,7 +215,7 @@ const [activeTeam, setActiveTeam] = useState(null);
               setActiveTeam(prev => (prev === team.id ? null : team.id))
             }
           />
-          {index < teams.length - 1 && <div className="divider"></div>}
+          {index < teams.length && <div className="divider"></div>}
         </div>
   ))}
 </div>

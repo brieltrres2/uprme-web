@@ -63,7 +63,7 @@ const closeMenu = () => {
           <div className="menu-element-A" style={{ color: 'lime', fontSize: '20px', marginTop: '30px' }}>DIRECTORY</div>
           <hr className="menu-line" />
           <Link className="menu-element" to="/">HOME</Link>
-          <Link className="menu-element" to="/contact">CONTACT US</Link>
+          <Link className="menu-element" to="/contact ">CONTACT US</Link>
           <hr className="menu-line" style={{ borderTop: '2px solid rgba(0, 0, 0, 0)', marginBottom: '100px' }} />
 
           {/* TEAMS Dropdown */}

@@ -2,12 +2,12 @@ import { useEffect, useState, useRef } from "react";
 import '../../App.css';
 import "../../index.css";
 import "../../SideMenu.css";
-import FullFooter from "../../components/fullFooter.jsx";
-import FadeOutEffect from "../../components/openEffect.jsx";
+import MobFooter from "../../components/mobileFooter.jsx";
 import SmartLink from "../../components/smartLink.jsx";
-import TopBar from "../../components/topBar.jsx";
+import MobTopBar from "../../components/mobTopBar.jsx";
 import MediaHeader from '../../components/mediaHeader.jsx';
 import Footer from '../../components/footerTags.jsx';
+import FadeOutEffect from "../../components/openEffect.jsx";
 
 function MobNotFound() {
     const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -75,7 +75,7 @@ return (
             style={{ background: "linear-gradient(to top, #000001, #1d1d1d)" }}
         >
             <FadeOutEffect />
-            <TopBar />
+            <MobTopBar />
             <SmartLink />
             <div className="divider" style={{ marginTop: "80px" }}></div>
             <div style={{ position: "relative", width: "100%", height: "56%" }}>
@@ -149,7 +149,7 @@ return (
             </button>
         </div>
         <div>
-            <FullFooter />
+            <MobFooter />
         </div>
     </div>
 );

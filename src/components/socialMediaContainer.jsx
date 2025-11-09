@@ -26,20 +26,20 @@ const SocialGrid = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        alignContent: "center",
         width: "100%",
-        
         padding: "60px 0",
       }}
     >
       <div
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+          display: "flex",
+          flexWrap: "wrap",
           gap: "30px",
           justifyContent: "center",
           width: "80%",
           maxWidth: "1200px",
-          alignItems:"center",
+
         }}
       >
         {socials.map((s, index) => (

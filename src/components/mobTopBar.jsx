@@ -20,7 +20,7 @@ function NavLink({ to, children }) {
   return <Link to={to} onClick={handleClick}>{children}</Link>;
 }
 
-function TopBar() {
+function MobTopBar() {
 
   const [open, setOpen] = useState(false);
 
@@ -46,6 +46,7 @@ function TopBar() {
         backgroundSize: 'cover',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         borderColor: "#FFFFFF",
         borderBottomWidth: "5px",
         borderTopWidth: "0px",
@@ -55,7 +56,7 @@ function TopBar() {
         zIndex: 999,
       }}
     >
-      <SmartLink to="/"><img className="logo" style={{ paddingLeft:'175%', zIndex: 1000 }} src="/UPRM-ICON.svg" alt="logo"></img>
+      <SmartLink to="/"><img className="logo" style={{width: '70%' ,alignItems:"center", zIndex: 1000 }} src="/LETRAS-UPRM.svg" alt="logo"></img>
       </SmartLink>
       
     </div>
@@ -80,4 +81,4 @@ function TopBar() {
 
   );
 }
-export default TopBar;
+export default MobTopBar;

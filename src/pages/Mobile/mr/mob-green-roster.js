@@ -6,11 +6,25 @@ import TopBar from "../../../components/topBar";
 import '../../../App.css';
 import "../../../index.css";
 import "../../../SideMenu.css";
-import txtr from "../../../txtr.svg";
 import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
-import { Navigate } from "react-router-dom";
 
+
+const players = [
+  { user: "SAYO", title: "Captain" },
+  { user: "CARNEFRITA456", title: "Player" },
+  { user: "YEUDEEDLE", title: "Player" },
+  { user: "WILLTL84", title: "Manager" },
+  { user: "CH33SE", title: "Player" },
+  { user: "URIERODZ", title: "Player" },
+  { user: "ZETA", title: "Player" },
+  { user: "POOKYRACOON", title: "Player" },
+];
+
+const staff = [
+  { user: "SKULLMASTEX", title: "Coach" },
+  { user: "WILLTL84", title: "Manager"   },
+];
 
 const titleIcons = {
   Player: "/player.svg",
@@ -23,8 +37,6 @@ const titleIcons = {
 function MobMRGreen() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
-  const [roster, setRoster] = useState([]);
-
   useEffect(() => {
     setTimeout(() => {
       setIsOverlayVisible(false);
@@ -35,37 +47,6 @@ function MobMRGreen() {
     document.title = "MARVEL RIVALS GREEN - UPRM Esports";
   }, []);
 
-  useEffect(() => {
-    const dragCursor = document.getElementById("dragCursor");
-    if (!dragCursor) return;
-
-    const handleMouseEnter = () => (dragCursor.hidden = false);
-    const handleMouseMove = (e) => {
-      if (!dragCursor.hidden) {
-        const offsetX = dragCursor.offsetWidth / 2;
-        const offsetY = dragCursor.offsetHeight / 2;
-        dragCursor.style.left = `${e.clientX - offsetX}px`;
-        dragCursor.style.top = `${e.clientY - offsetY}px`;
-      }
-    };
-    const handleMouseLeave = () => (dragCursor.hidden = true);
-
-    const portraits = document.querySelectorAll(".player-portrait");
-    portraits.forEach((p) => {
-      p.addEventListener("mouseenter", handleMouseEnter);
-      p.addEventListener("mousemove", handleMouseMove);
-      p.addEventListener("mouseleave", handleMouseLeave);
-    });
-
-    return () => {
-      portraits.forEach((p) => {
-        p.removeEventListener("mouseenter", handleMouseEnter);
-        p.removeEventListener("mousemove", handleMouseMove);
-        p.removeEventListener("mouseleave", handleMouseLeave);
-      });
-    };
-  }, []);
-
   return (
     <>
       <div className="App" style={{ background: "black" }}>
@@ -74,9 +55,10 @@ function MobMRGreen() {
         <TopBar />
         <SmartLink />
 
-        <div className="title" style={{ color: "white", padding: "20px" }}>
-          <h2 className="teams-h2">MEET</h2>{" "}
+        <div className="title" style={{display:'flex',justifyContent:"center", backgroundColor: '#004d00', color: "white", padding: "50px" }}>
+          <div className="roster-title-container"><h2 className="teams-h2">MEET</h2>{" "}
           <h1 className="teams-h1">THE ROSTER</h1>
+          <img src='../../../rivalsico.png' alt="Rivals Icon"></img></div>
         </div>
       </div>
 
@@ -96,54 +78,15 @@ function MobMRGreen() {
 
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Captain"
-        name="carnefrita456"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="yeudeedle"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="willtl84"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="ch335ycheese"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="sammy6352"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="urierodz"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="zeta.z"
-      />
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Player"
-        name="pookyraccoon2"
-      />
+      {players.map(({ user, title }) => (
+        <PlayerPortrait
+          key={user}
+          logo={`${process.env.PUBLIC_URL}/rivals-portrait/${user.toLowerCase()}.png`}
+          alt={user}
+          title={title}
+          user={user}
+        />
+      ))}
     </>
   </div>
 
@@ -152,19 +95,15 @@ function MobMRGreen() {
   <h1 className="teams-h1" style={{ marginLeft: "40px", textAlign: "left" }}>COACHING & MANAGEMENT</h1>
   <div className="portraits-wrapper">
     <>
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Coach"
-        name="skullmastex"
-      />
-
-      <PlayerPortrait
-        logo={process.env.PUBLIC_URL + "/overwatch.png"}
-        alt="jiffkami"
-        title="Manager"
-        name="willtl84"
-      />
+      {staff.map(({ user, title }) => (
+        <PlayerPortrait
+          key={user}
+          logo={`${process.env.PUBLIC_URL}/rivals-portrait/${user.toLowerCase()}.png`}
+          alt={user}
+          title={title}
+          user={user}
+        />
+      ))}
     </>
   </div>
 </div>
