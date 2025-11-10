@@ -56,7 +56,7 @@ function MobTopBar() {
         zIndex: 999,
       }}
     >
-      <SmartLink to="/"><img className="logo" style={{width: '70%' ,alignItems:"center", zIndex: 1000 }} src="/LETRAS-UPRM.svg" alt="logo"></img>
+      <SmartLink to="/"><img className="logo" style={{width: '170px' ,alignItems:"center", zIndex: 1000 }} src="/LETRAS-UPRM.svg" alt="logo"></img>
       </SmartLink>
       
     </div>

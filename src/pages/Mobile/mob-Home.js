@@ -7,6 +7,7 @@ import FadeOutEffect from "../../components/openEffect.jsx";
 import SmartLink from "../../components/smartLink.jsx";
 import MobTopBar from "../../components/mobTopBar.jsx";
 import TeamItem from "../../components/team-item.jsx";
+import MSocialGrid from "../../components/mobsocialMediaContainer";
 
 function MobHome() {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
@@ -184,11 +185,11 @@ const [activeTeam, setActiveTeam] = useState(null);
             className="our-teams"
             style={{
               position: "relative",
-                marginTop: "50px",
+                marginTop: "100px",
               marginBottom: "70px",
             }}
           >
-            OUR TEAMS
+            <br/>OUR TEAMS
           </p>
         </div>
 
@@ -207,8 +208,25 @@ const [activeTeam, setActiveTeam] = useState(null);
   ))}
 </div>
 
-    <div className="divider" style={{ marginBottom: "300px" }}></div>
+    <div className="divider" style={{ marginBottom: "150px" }}></div>
 
+
+          <div className="our-teams" style={{color:'white'}}>FOLLOW US
+
+
+
+          </div>
+          <MSocialGrid  />
+
+          <div className="contact-us-section">
+              <h2 className="contact-us-title">GET INVOLVED</h2>
+              <p className="get-involed-text" style={{ textAlign:'center',justifyContent: "center", fontSize: "30px" }}>
+                  Have questions or want to learn more? Reach out to us!
+              </p>
+              <SmartLink to="/contact" className="contact-us-button">
+                  <span className="home-about-right"style={{alignItems:"center",textAlign: "center", justifyContent: "center"}}> CONTACT US</span>
+              </SmartLink>
+          </div>
 
         <MobFooter />
       </div>

@@ -16,7 +16,7 @@ export default function TeamItem({
 }) {
   return (
     <div
-      className="team-item"
+      className={`team-item ${isActive ? "active" : ""}`}
       onClick={onClick}
       style={{ position: "relative", cursor: "pointer" }}
     >

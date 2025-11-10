@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FadeOutEffect from "../../components/openEffect.jsx";
 import TopBar from "../../components/topBar.jsx";
 import FullFooter from "../../components/fullFooter.jsx";
-import ContactUs from "../../components/contactUs.jsx"; 
+import ContactUs from "../../components/contactUs.jsx";
 
 function Contact() {
-  return (
-    <div className="App" style={{ background: "#111", minHeight: "100vh" }}>
-      <FadeOutEffect />
-      <TopBar />
+    useEffect(() => {
+        document.title = "CONTACT US - UPRM Esports";
+    }, []);
 
-      <div style={{ color: "white", textAlign: "center" }}>
-        <ContactUs /> 
-      </div>
+    return (
+        <div className="App" style={{ background: "#111", minHeight: "100vh" }}>
+            <FadeOutEffect />
+            <TopBar />
 
-      <FullFooter />
-    </div>
-  );
+            <div style={{ color: "white", textAlign: "center" }}>
+                <ContactUs />
+            </div>
+
+            <FullFooter />
+        </div>
+    );
 }
 
 export default Contact;
