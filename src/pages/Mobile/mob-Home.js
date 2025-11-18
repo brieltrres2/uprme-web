@@ -117,7 +117,7 @@ const [activeTeam, setActiveTeam] = useState(null);
       <div className="divider" style={{ marginTop: "80px" }}></div>
       <div style={{ position: "relative", width: "100%", height: "56%" }}>
         <div>
-          <video autoPlay loop muted playsInline className="cutscene" style={{height: '100%',}}>
+          <video autoPlay loop muted playsInline preload="auto" className="cutscene" style={{height: '100%',}}>
             <source src="/asset.mp4" type="video/mp4" />
           </video>
 

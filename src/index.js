@@ -8,12 +8,14 @@ import reportWebVitals from "./reportWebVitals";
 import useDeviceType from "./routes/useDeviceType";
 import DesktopRoutes from "./routes/DesktopRoutes";
 import MobileRoutes from "./routes/MobileRoutes";
+import PreloadPublicImages from "./components/PreloadPublicImages";
 
 function AppRouter() {
   const isMobile = useDeviceType();
 
   return (
     <BrowserRouter>
+      <PreloadPublicImages />
       <ScrollToTop />
       {isMobile ? <MobileRoutes /> : <DesktopRoutes />}
     </BrowserRouter>

@@ -22,7 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-manifest": "node scripts/generate-image-manifest.js",
+    "prestart": "npm run generate-manifest",
+    "prebuild": "npm run generate-manifest"
   },
   "eslintConfig": {
     "extends": [
