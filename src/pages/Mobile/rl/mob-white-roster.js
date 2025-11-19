@@ -43,7 +43,7 @@ function MobRLWhite() {
     }, []);
 
     useEffect(() => {
-        document.title = "ROCKET LEAGUE GREEN - UPRM Esports";
+        document.title = "ROCKET LEAGUE WHITE - UPRM Esports";
     }, []);
 
     return (
