@@ -56,25 +56,10 @@ function MobTopBar() {
         zIndex: 999,
       }}
     >
-      <SmartLink to="/"><img className="logo" style={{width: '170px' ,alignItems:"center", zIndex: 1000 }} src="/LETRAS-UPRM.svg" alt="logo"></img>
-      </SmartLink>
-      
+      <a href="/" style={{ display: 'inline-block' }}>
+        <img className="logo" style={{ width: '170px', alignItems: "center" }} src="/LETRAS-UPRM.svg" alt="logo" />
+      </a>
     </div>
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        height: '80px',
-        display: 'flex',
-        alignItems: 'center',
-        zIndex: 1000,
-      }}
-    >
-
-
-
-      </div>
 
       <SideMenu />
     </>

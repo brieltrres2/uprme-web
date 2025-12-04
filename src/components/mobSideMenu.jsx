@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "../SideMenu.css";
-import MediaHeader from "./mediaHeader";
+
 
 const SOCIAL_LINKS = {
   instagram: "https://instagram.com/uprmesports",
@@ -62,6 +62,9 @@ const closeMenu = () => {
           {/* DIRECTORY */}
           <div className="menu-element-A" style={{ color: 'lime', fontSize: '20px', marginTop: '30px' }}>DIRECTORY</div>
           <hr className="menu-line" />
+          <Link className="menu-element" to="/rumble-of-champions" style={{margin:"40px"}}>
+                      <span style={{color:'lime'}}> RUMBLE OF CHAMPIONS </span>
+                    </Link>
           <Link className="menu-element" to="/">HOME</Link>
           <Link className="menu-element" to="/contact ">CONTACT US</Link>
           <hr className="menu-line" style={{ borderTop: '2px solid rgba(0, 0, 0, 0)', marginBottom: '100px' }} />

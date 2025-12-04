@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop";
 import MobHome from "../pages/Mobile/mob-Home";
 import MobAbout from "../pages/Mobile/mob-About";
 import MobToS from "../pages/Mobile/mob-ToS";
@@ -8,10 +9,13 @@ import MobOWGreen from "../pages/Mobile/ow/mob-green-roster";
 import MobMRGreen from "../pages/Mobile/mr/mob-green-roster";
 import MobRLGreen from "../pages/Mobile/rl/mob-green-roster";
 import MobRLWhite from "../pages/Mobile/rl/mob-white-roster";
+import MobRoC from "../pages/Mobile/mob-Rumble";
 
 export default function MobileRoutes() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="*" element={<MobNotFound />} />
       <Route path="/" element={<MobHome />} />
       <Route path="/contact" element={<MobAbout />} />
@@ -21,6 +25,8 @@ export default function MobileRoutes() {
       <Route path="/teams/rocket-league/green-roster" element={<MobRLGreen />} />
       <Route path="/teams/rocket-league/white-roster" element={<MobRLWhite />} />
       <Route path="/terms-of-service" element={<MobToS />} />
-    </Routes>
+      <Route path="/rumble-of-champions" element={<MobRoC />} />
+      </Routes>
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop";
 import Home from "../pages/Desktop/Home";
+import RoC from "../pages/Desktop/Rumble";
 import About from "../pages/Desktop/About";
 import ToS from "../pages/Desktop/ToS";
 import NotFound from "../pages/Desktop/NotFound";
@@ -11,16 +13,20 @@ import RLWhite from "../pages/Desktop/rl/white-roster";
 
 export default function DesktopRoutes() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<About />} />
+      <Route path="/rumble-of-champions" element={<RoC />} />
       <Route path="/teams/rainbow-six-siege/green-roster" element={<R6Green />} />
       <Route path="/teams/overwatch/green-roster" element={<OWGreen />} />
       <Route path="/teams/marvel-rivals/green-roster" element={<MRGreen />} />
       <Route path="/teams/rocket-league/green-roster" element={<RLGreen />} />
       <Route path="/teams/rocket-league/white-roster" element={<RLWhite />} />
       <Route path="/terms-of-service" element={<ToS />} />
-    </Routes>
+      </Routes>
+    </>
   );
 }

@@ -6,7 +6,6 @@ import FullFooter from "../../components/fullFooter.jsx";
 import FadeOutEffect from "../../components/openEffect.jsx";
 import SmartLink from "../../components/smartLink.jsx";
 import TopBar from "../../components/topBar.jsx";
-import MediaHeader from '../../components/mediaHeader.jsx';
 import Footer from '../../components/footerTags.jsx';
 
 function NotFound() {

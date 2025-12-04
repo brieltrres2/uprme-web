@@ -5,7 +5,7 @@ import "../../SideMenu.css";
 import MobFooter from "../../components/mobileFooter.jsx";
 import SmartLink from "../../components/smartLink.jsx";
 import MobTopBar from "../../components/mobTopBar.jsx";
-import MediaHeader from '../../components/mediaHeader.jsx';
+
 import Footer from '../../components/footerTags.jsx';
 import FadeOutEffect from "../../components/openEffect.jsx";
 

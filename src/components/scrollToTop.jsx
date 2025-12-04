@@ -3,9 +3,14 @@ import { useLocation } from 'react-router-dom';
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Reset scroll position on route change
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    // Also ensure document scroll positions are reset (cross-browser)
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [pathname]);
 
-  return null; 
+  return null;
 }

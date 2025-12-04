@@ -684,9 +684,87 @@ p {
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  border-bottom-width: 10px;
-  border-color: green;
-  border-style: double;
+  border-bottom-width: 15px;
+  border-color: rgb(255, 255, 255);
+  border-style:  solid;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+/* Video side titles */
+.video-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: white;
+  pointer-events: none;
+}
+
+.video-title.left { left: 20px; }
+.video-title.right { right: 20px; }
+
+.type-up,
+.type-down {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.type-up {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  animation: typeUp 2.5s steps(20, end) both;
+}
+
+.type-down {
+  writing-mode: vertical-rl;
+  animation: typeDown 2.5s steps(20, end) both;
+}
+
+@keyframes typeUp {
+  from { max-height: 0; }
+  to { max-height: 100vh; }
+}
+
+@keyframes typeDown {
+  from { max-height: 0; }
+  to { max-height: 100vh; }
+}
+
+.scroll-indicator .arrow {
+  width: 18px;
+  height: 18px;
+  border-left: 3px solid rgba(255,255,255,0.9);
+  border-bottom: 3px solid rgba(255,255,255,0.9);
+  transform: rotate(-45deg);
+  animation: arrowBounce 2.2s infinite ease-in-out;
+}
+
+.scroll-indicator .arrow:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.scroll-indicator .arrow:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes arrowBounce {
+  0% { opacity: 0; transform: translateY(0) rotate(-45deg); }
+  40% { opacity: 1; }
+  60% { opacity: 1; transform: translateY(8px) rotate(-45deg); }
+  100% { opacity: 0; transform: translateY(14px) rotate(-45deg); }
 }
 
 @media (max-width: 480px) {
@@ -706,7 +784,7 @@ p {
   color: white;
   overflow: hidden;
   z-index: 1;
-  top: 50px;
+  
   padding-top: 50px;
   border-top: 10px solid white;
   border-bottom: 10px solid white;
@@ -729,8 +807,44 @@ p {
   border-bottom: 10px solid white;
     margin-bottom: 20px;
   box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.6);
+  background-color:#003d00;
 }
 
+  #rumble-logo {
+    align-items: center;
+    width: min(250px);
+    height: min(150px);
+    position: relative;
+    top: 25%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8));
+  }
+
+  .rumble-learn-more {
+    font-weight: 600;
+    position: absolute;
+    right: 40px;
+    top: 170px;
+    text-align: right;
+    text-decoration: underline #1eff008c;
+   
+  }
+
+.rumble-of-champion {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color:rgb(0, 122, 0);
+  display: flex;
+
+  text-align: left;
+  margin-top: 20px;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  
+}
 .home-about-left {
   flex: 1;
   display: flex;
@@ -827,11 +941,10 @@ position: relative;
 }
 
 .about-parallax {
-  background-image: url('./txtr3.svg');
   content: "";
   position: absolute;
   inset: 0;
-  background-size: cover;
+  object-fit: cover;
   background-position: center;
   filter: blur(5px) brightness(.5);
   z-index: -1;
@@ -839,11 +952,10 @@ position: relative;
 }
 
 .mabout-parallax {
-  background-image: url('./txtr.svg');
   content: "";
   position: absolute;
   inset: 0;
-  background-size: cover;
+  object-fit: cover;
   background-position: center;
   filter: blur(5px) brightness(.5);
   z-index: -1;
@@ -890,7 +1002,7 @@ position: relative;
 
 
 .home-about-title {
-  opacity: 0;
+  opacity: 1;
   transform: translate(-50%, -80%);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
@@ -903,7 +1015,7 @@ position: relative;
 
 
 .home-about-text {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.2s ease-out;
   transition-delay: 0.5s;
 }
@@ -1379,3 +1491,4 @@ position: relative;
 .mob-portraits-wrapper > :last-child:nth-child(odd) {
   grid-column: span 2;
 }
+
