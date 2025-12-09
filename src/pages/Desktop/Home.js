@@ -138,7 +138,7 @@ function Home() {
         </div>
       </div>
       <div className="rumble-of-champion">
-        <p style={{fontSize:"40px",paddingTop:'5px',alignItems: 'center',paddingLeft:'20px'}}><span style={{color:'lime',fontSize:'70px',fontWeight:900}}>RUMBLE OF CHAMPIONS</span><br></br>THE BIGGEST ESPORTS EVENT, <br></br> <span style={{color:'rgba(120, 255, 138, 1)'}}>FROM THE WEST.</span><br></br><span style={{fontWeight:500, fontSize:'30px'}}>02.28.2026</span></p>
+        <p style={{fontSize:"40px",paddingTop:'5px',alignItems: 'center',paddingLeft:'20px'}}><span style={{color:'lime',fontSize:'70px',fontWeight:900}}>RUMBLE OF CHAMPIONS</span><br></br>THE BIGGEST ESPORTS EVENT, <br></br><span style={{fontWeight:500, fontSize:'30px'}}>02.28.2026</span></p>
             <SmartLink to="/rumble-of-champions"><p className="rumble-learn-more">LEARN MORE &gt;</p></SmartLink>
       </div>
 

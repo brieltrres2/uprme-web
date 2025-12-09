@@ -10,7 +10,7 @@ import txtr from "../../../txtr.svg";
 import bgImage from '../../../txtr2.svg';
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
-import coverPhoto from '../../../overwatchCover.png';
+import coverPhoto from '../../../overwatchCover.webp';
 
 const players = [
   { user: "THESEABASS", title: "Player" },

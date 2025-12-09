@@ -418,6 +418,7 @@ const [registerHover, setRegisterHover] = useState(false);
         </div>
       </div>
       <div style={{ fontFamily: "Montserrat, sans-serif", padding: "0 20px" }}>
+       <div style={{ fontFamily: "Montserrat, sans-serif", padding: "0 20px" }}>
           <div
             style={{
               color: "white",
@@ -458,17 +459,16 @@ const [registerHover, setRegisterHover] = useState(false);
                 background: "rgba(0,0,0,0.4)",
                 boxShadow: "0 6px 18px rgba(0,0,0,0.5)",
               }}
-              
             >
-
               <div style={{ width: 80, height: 80, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 {stadiumSvg}
               </div>
-              <a href="https://maps.app.goo.gl/Qu1WBckXWRZcSAm47" target="_blank" rel="noopener noreferrer"><div style={{textDecoration:"underline",color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}>RAFAEL A. MANGUAL COLOSSEUM</div></a>
+              <a href="https://maps.app.goo.gl/feZ92Bv7kqk6N9vx7" target="_blank" rel="noreferrer"><div style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '20px' }}><span style={{textDecoration:"underline"}}>RAFAEL A. MANGUAL COLOSSEUM</span>
+                <p style={{textDecoration:"none", color:"lime", fontSize:14, paddingTop:'10px'}}>URPM CAMPUS</p></div></a>
               <div style={{ width: 80, height: 80, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 {clockSvg}
               </div>
-              <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Saturday, Februrary 28th, 2026</p>
+              <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Saturday, Februrary 28th, 2026<br></br><span style={{color:'lime', fontSize:14}}>DOORS OPEN AT 7am</span></p>
 
               <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Top <span style={{color:'lime'}}>2</span> teams of each category earn a pass to the live event.</p>
 
@@ -504,7 +504,7 @@ const [registerHover, setRegisterHover] = useState(false);
             </a>
             <p style={{paddingTop:'10px',color:'gray'}}>You will be redirected to <a href="https://www.start.gg" target="_blank" rel="noopener noreferrer">start.gg</a> </p>
           </div>
-    </div><FullFooter /></>
+    </div><FullFooter /></div></>
 
 
 

@@ -9,7 +9,7 @@ import "../../../SideMenu.css";
 import txtr from "../../../txtr.svg";
 import PlayerPortrait from "../../../components/player-item";
 import { Navigate } from "react-router-dom";
-import coverPhoto from '../../../rivalsCover.png';
+import coverPhoto from '../../../rivalsCover.webp';
 
 const players = [
   { user: "SAYO", title: "Captain" },

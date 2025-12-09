@@ -452,11 +452,12 @@ const [registerHover, setRegisterHover] = useState(false);
               <div style={{ width: 80, height: 80, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 {stadiumSvg}
               </div>
-              <div style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}>RAFAEL A. MANGUAL COLOSSEUM</div>
+              <div style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}>RAFAEL A. MANGUAL COLOSSEUM
+                <p style={{color:"lime", fontSize:14}}>URPM CAMPUS</p></div>
               <div style={{ width: 80, height: 80, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 {clockSvg}
               </div>
-              <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Saturday, Februrary 28th, 2026</p>
+              <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Saturday, Februrary 28th, 2026<br></br><span style={{color:'lime', fontSize:14}}>DOORS OPEN AT 7am</span></p>
 
               <p style={{ color: "white", fontFamily: "Montserrat, sans-serif", fontWeight: 800, fontSize: 20, paddingBottom: '30px' }}> Top <span style={{color:'lime'}}>2</span> teams of each category earn a pass to the live event.</p>
 
